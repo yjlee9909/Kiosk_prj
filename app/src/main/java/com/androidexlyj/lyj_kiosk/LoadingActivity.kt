@@ -23,5 +23,6 @@ class LoadingActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        //            백버튼 막기
     }
 }
