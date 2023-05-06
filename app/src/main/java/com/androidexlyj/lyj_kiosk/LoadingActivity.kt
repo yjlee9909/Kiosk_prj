@@ -11,6 +11,7 @@ class LoadingActivity : AppCompatActivity() {
 
     lateinit var button : Button
     lateinit var imgView : ImageView
+    var backKeyPressedTime : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,17 @@ class LoadingActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        //            백버튼 막기
+    }
+    // 백버튼 막기
+    override fun onBackPressed() {
+//        super.onBackPressed()
+        if (System.currentTimeMillis() > backKeyPressedTime + 2500) {
+            backKeyPressedTime = System.currentTimeMillis()
+            return
+        }
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2500) {
+            // 종료
+            finishAffinity()
+        }
     }
 }
