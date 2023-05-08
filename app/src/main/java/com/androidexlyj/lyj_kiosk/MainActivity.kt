@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var viewPager2: ViewPager2
 
+    lateinit var lyj_cardBtn : Button
+
     // 리스트 추가
     private val fragments = listOf(
         hotCof_Fragment()
@@ -33,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "LYJ KIOSK"
-
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_goHome.setOnClickListener {
@@ -76,6 +77,8 @@ class MainActivity : AppCompatActivity() {
             tab.text = tabs[position]
         }.attach()
         // attach로 TabLayout, ViewPager 연결
+
+
     }
 
     class ViewPager2Adapter(fa : FragmentActivity): FragmentStateAdapter(fa) {
