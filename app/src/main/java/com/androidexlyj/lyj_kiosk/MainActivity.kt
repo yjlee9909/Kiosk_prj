@@ -3,6 +3,7 @@ package com.androidexlyj.lyj_kiosk
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,29 +56,30 @@ class MainActivity : AppCompatActivity() {
             "디저트"
         )
 
-//        // ViewPager2 어댑터 작성
+////        // ViewPager2 어댑터 작성
 //        viewPager2.adapter = object : FragmentStateAdapter(this) {
 //            // 프래그먼트 저장 배열
 //            var fragments = listOf<Fragment>()
 //            override fun getItemCount(): Int = fragments.size
 //            override fun createFragment(position: Int): Fragment {
-////                return when (position) {
-////                    0 -> CoffeeHotFragment()
-////                    1 -> CoffeeIceFragment()
-////                    else -> CoffeeIceFragment()
-////                }
+//                return when (position) {
+//                    0 -> CoffeeHotFragment()
+//                    1 -> CoffeeIceFragment()
+//                    else -> CoffeeIceFragment()
+//                }
 //                return fragments.get(position)
 //            }
 //        }
 
         TabLayoutMediator(tabLayout, viewPager2) {tab, position ->
-//            tab.text = "Fragment ${position + 1}"
+            // 리스트 목록을 가져와 탭에 보여주기
+            tab.text = tabs[position]
         }.attach()
         // attach로 TabLayout, ViewPager 연결
     }
 
     class ViewPager2Adapter(fa : FragmentActivity): FragmentStateAdapter(fa) {
-        override fun getItemCount(): Int = 8
+        override fun getItemCount(): Int = 6
         // Fragment 연결
         override fun createFragment(position: Int): Fragment {
             return when (position) {
@@ -114,6 +116,8 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
     //        super.onBackPressed()
     }
+
+
 
 }
 
