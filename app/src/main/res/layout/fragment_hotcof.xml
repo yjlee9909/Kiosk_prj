@@ -15,10 +15,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="15dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="15dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -27,8 +29,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -38,186 +40,34 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="(HOT) 아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-<!--                추가-->
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -227,24 +77,59 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -253,10 +138,12 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="15dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -265,8 +152,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -276,67 +163,34 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -346,24 +200,59 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -372,10 +261,12 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:layout_marginBottom="15dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -384,8 +275,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -395,67 +286,34 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:background="@drawable/menu_round_button"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_payment"
-                            android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="#FF1F1F"
-                            android:text="2500원" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:background="@drawable/menu_round_button"
+                        android:clickable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="10dp">
@@ -465,24 +323,181 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_payment"
                             android:backgroundTint="@color/black"
-                            android:padding="16dp"/>
+                            android:padding="16dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:text="아메리카노"
+                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"/>
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="14dp"
+                            android:text="2500원"
                             android:textColor="#FF1F1F"
-                            android:text="2500원" />
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--                추가-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/menu_round_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_payment"
+                            android:backgroundTint="@color/black"
+                            android:padding="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="아메리카노"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2500원"
+                            android:textColor="#FF1F1F"
+                            android:textSize="14dp" />
                     </LinearLayout>
 
                 </LinearLayout>

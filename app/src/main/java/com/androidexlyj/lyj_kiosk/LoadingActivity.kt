@@ -9,9 +9,9 @@ import android.widget.ImageView
 
 class LoadingActivity : AppCompatActivity() {
 
-    lateinit var button : Button
-    lateinit var imgView : ImageView
-    var backKeyPressedTime : Long = 0
+    lateinit var button: Button
+    lateinit var imgView: ImageView
+    var backKeyPressedTime: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +25,7 @@ class LoadingActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
     // 백버튼 막기
     override fun onBackPressed() {
 //        super.onBackPressed()

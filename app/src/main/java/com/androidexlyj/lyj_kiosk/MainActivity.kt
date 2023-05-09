@@ -19,11 +19,11 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
-    lateinit var lyj_goHome : ImageButton
+    lateinit var lyj_goHome: ImageButton
     lateinit var tabLayout: TabLayout
     lateinit var viewPager2: ViewPager2
 
-    lateinit var lyj_cardBtn : Button
+    lateinit var lyj_cardBtn: Button
 
     // 리스트 추가
     private val fragments = listOf(
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }
 
-        TabLayoutMediator(tabLayout, viewPager2) {tab, position ->
+        TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
             // 리스트 목록을 가져와 탭에 보여주기
             tab.text = tabs[position]
         }.attach()
@@ -81,15 +81,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    class ViewPager2Adapter(fa : FragmentActivity): FragmentStateAdapter(fa) {
+    class ViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = 6
+
         // Fragment 연결
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                    0 -> CoffeeHotFragment()
-                    1 -> CoffeeIceFragment()
-                    else -> CoffeeIceFragment()
-                }
+                0 -> CoffeeHotFragment()
+                1 -> CoffeeIceFragment()
+                else -> CoffeeIceFragment()
+            }
         }
 
     }
@@ -103,6 +104,7 @@ class MainActivity : AppCompatActivity() {
             return inflater.inflate(R.layout.fragment_hotcof, container, false)
         }
     }
+
     class CoffeeIceFragment : Fragment() {
         override fun onCreateView(
             inflater: LayoutInflater,
@@ -114,12 +116,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     // 백버튼 막기
     override fun onBackPressed() {
-    //        super.onBackPressed()
+        //        super.onBackPressed()
     }
-
 
 
 }
