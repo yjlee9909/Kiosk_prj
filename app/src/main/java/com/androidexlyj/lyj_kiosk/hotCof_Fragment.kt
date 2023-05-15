@@ -1,10 +1,9 @@
 package com.androidexlyj.lyj_kiosk
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.LinearLayout
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +33,21 @@ class hotCof_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hotcof, container, false)
+        val view = inflater.inflate(R.layout.fragment_hotcof, container, false)
+        val lyj_hot_ameri = view.findViewById<LinearLayout>(R.id.lyj_hot_ameri)
+
+        lyj_hot_ameri.setOnClickListener {
+            /*Toast.makeText(context, "짧은 토스트 메시지입니다.",Toast.LENGTH_SHORT).show()
+            Log.d("click", "hi")*/
+            val dialog = optionDialog()
+            dialog.show(activity?.supportFragmentManager!!, "CustomDialog")
+
+        }
+
+        return view
     }
+
+
 
     companion object {
         /**

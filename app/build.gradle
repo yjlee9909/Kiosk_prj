@@ -6,6 +6,9 @@ plugins {
 android {
     namespace 'com.androidexlyj.lyj_kiosk'
     compileSdk 33
+    viewBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.androidexlyj.lyj_kiosk"

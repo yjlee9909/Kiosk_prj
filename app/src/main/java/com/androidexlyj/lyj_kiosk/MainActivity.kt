@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TableLayout
+import android.widget.Toast
 import androidx.constraintlayout.widget.Placeholder
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -87,33 +88,14 @@ class MainActivity : AppCompatActivity() {
         // Fragment 연결
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> CoffeeHotFragment()
-                1 -> CoffeeIceFragment()
-                else -> CoffeeIceFragment()
+                0 -> hotCof_Fragment()
+                1 -> iceCof_Fragment()
+                else -> iceCof_Fragment()
             }
         }
 
     }
 
-    class CoffeeHotFragment : Fragment() {
-        override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            return inflater.inflate(R.layout.fragment_hotcof, container, false)
-        }
-    }
-
-    class CoffeeIceFragment : Fragment() {
-        override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            return inflater.inflate(R.layout.fragment_icecof, container, false)
-        }
-    }
 
 
     // 백버튼 막기
