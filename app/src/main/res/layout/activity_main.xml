@@ -81,12 +81,13 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp">
+                            >
 
                             <ImageButton
                                 android:layout_width="20dp"
@@ -163,9 +164,42 @@
                             </LinearLayout>
 
                         </LinearLayout>
+<!--                        옵션 추가시 추가될 목록-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="45dp">
+                            <LinearLayout
+                                android:id="@+id/lyj_optionPlusMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="2dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/option_select_plus"/>
+                                <TextView
+                                    android:id="@+id/lyj_optionPlusMenuName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="11dp"
+                                    android:textColor="#6E6E6E"
+                                    android:text="뜨거운 (HOT)"/>
+                                <TextView
+                                    android:id="@+id/lyj_optionPlusMenuPrice"
+                                    android:gravity="right"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="#6E6E6E"
+                                    android:text="+0원"/>
+                            </LinearLayout>
 
+                        </LinearLayout>
                     </LinearLayout>
-
 
                 </ScrollView>
             </LinearLayout>

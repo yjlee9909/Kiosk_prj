@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -25,6 +26,11 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optHotOrIce = view.findViewById<LinearLayout>(R.id.lyj_optHotOrIce)
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         val lyj_optionCart = view.findViewById<Button>(R.id.lyj_optionCart)
+
+    val lyj_basic = view.findViewById<RadioButton>(R.id.lyj_basic)
+    val lyj_light = view.findViewById<RadioButton>(R.id.lyj_light)
+    val lyj_addShot = view.findViewById<RadioButton>(R.id.lyj_addShot)
+    val lyj_addTwoShot = view.findViewById<RadioButton>(R.id.lyj_addTwoShot)
 
         val params: WindowManager.LayoutParams = dialog?.window?.attributes as WindowManager.LayoutParams
         params.width = WindowManager.LayoutParams.MATCH_PARENT
@@ -47,6 +53,32 @@ class optionDialog(private val id: String, private val text: String, private val
         } else {
             lyj_optHotOrIce.visibility = View.VISIBLE
         }
+
+        // 라디오버튼 하나만 선택가능하도록
+        lyj_basic.setOnClickListener {
+            lyj_basic.isChecked = true
+            lyj_light.isChecked = false
+            lyj_addShot.isChecked = false
+            lyj_addTwoShot.isChecked = false
+        }
+    lyj_light.setOnClickListener {
+        lyj_basic.isChecked = false
+        lyj_light.isChecked = true
+        lyj_addShot.isChecked = false
+        lyj_addTwoShot.isChecked = false
+    }
+    lyj_addShot.setOnClickListener {
+        lyj_basic.isChecked = false
+        lyj_light.isChecked = false
+        lyj_addShot.isChecked = true
+        lyj_addTwoShot.isChecked = false
+    }
+    lyj_addTwoShot.setOnClickListener {
+        lyj_basic.isChecked = false
+        lyj_light.isChecked = false
+        lyj_addShot.isChecked = false
+        lyj_addTwoShot.isChecked = true
+    }
 
 
         lyj_optionDel.setOnClickListener {
