@@ -18,7 +18,7 @@ class payCardDialog : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.dialog_card, container, false)
-        /*val lyj_optionDel = view.findViewById<Button>(R.id.lyj_o*//**//*ptionDel)*/
+        val lyj_cancelBtn = view.findViewById<Button>(R.id.lyj_cancelBtn)
         val lyj_approveBtn = view.findViewById<Button>(R.id.lyj_approveBtn)
 
         val params: WindowManager.LayoutParams = dialog?.window?.attributes as WindowManager.LayoutParams
@@ -31,9 +31,9 @@ class payCardDialog : DialogFragment() {
 
 
 
-        /*lyj_optionDel.setOnClickListener {
+        lyj_cancelBtn.setOnClickListener {
             dismiss()
-        }*/
+        }
 
     lyj_approveBtn.setOnClickListener {
             dismiss()

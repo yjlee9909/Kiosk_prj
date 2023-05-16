@@ -141,7 +141,7 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
         <Button
-            android:id="@+id/lyj_optionDel"
+            android:id="@+id/lyj_cancelBtn"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

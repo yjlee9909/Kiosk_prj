@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
 class optionDialog : DialogFragment() {
@@ -36,6 +37,7 @@ class optionDialog : DialogFragment() {
         }
 
         lyj_optionCart.setOnClickListener {
+            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
             dismiss()
         }
 

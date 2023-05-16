@@ -88,18 +88,29 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp">
 
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/round_button2"
+                                android:scaleType="fitCenter"
+                                android:layout_gravity="center"
+                                android:src="@drawable/delete" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="(HOT)아메리카노"
                                 android:textColor="@color/black"
-                                android:textSize="14dp" />
+                                android:layout_gravity="center"
+                                android:textSize="12dp" />
 
                             <ImageButton
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
                                 android:background="@drawable/round_button"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/minus" />
@@ -114,8 +125,8 @@
                             <ImageButton
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
                                 android:background="@drawable/round_button"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/add" />
@@ -128,54 +139,6 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
                         </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="(HOT)아메리카노"
-                                android:textColor="@color/black"
-                                android:textSize="14dp" />
-
-                            <ImageButton
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@drawable/round_button"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/minus" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="1 개"
-                                android:textColor="@color/black"
-                                android:textSize="14dp" />
-
-                            <ImageButton
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@drawable/round_button"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/add" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="end"
-                                android:text="2500원"
-                                android:textColor="@color/black"
-                                android:textSize="14dp" />
-                        </LinearLayout>
-
 
                     </LinearLayout>
 
