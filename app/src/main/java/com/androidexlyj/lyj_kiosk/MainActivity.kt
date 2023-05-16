@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.Toast
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var lyj_cardBtn: Button
     lateinit var lyj_payBtn: LinearLayout
+    lateinit var lyj_payImgBtn: ImageView
 
     // 리스트 추가
     private val fragments = listOf(
@@ -41,11 +43,16 @@ class MainActivity : AppCompatActivity() {
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
+        lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {
             val intent = Intent(this, LoadingActivity::class.java)
             startActivity(intent)
         }
         lyj_payBtn.setOnClickListener {
+            val dialog = payCardDialog()
+            dialog.show(this.supportFragmentManager, "CustomDialog")
+        }
+        lyj_payImgBtn.setOnClickListener {
             val dialog = payCardDialog()
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
@@ -58,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 //        // 탭 추가
         val tabs = listOf(
             "커피(HOT)",
-            "커피(ICD)",
+            "커피(ICE)",
             "에이드&주스",
             "티(Tea)",
             "음료",

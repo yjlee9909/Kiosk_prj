@@ -85,6 +85,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/lyj_optHotOrIce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -105,11 +106,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
+                android:id="@+id/lyj_optHot"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="뜨거운 (HOT)"/>
             <RadioButton
+                android:id="@+id/lyj_optIce"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -229,11 +232,13 @@
                 >
 
                 <RadioButton
+                    android:id="@+id/lyj_basic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="기본"/>
 
                 <TextView
+                    android:id="@+id/lyj_basicWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -249,11 +254,13 @@
                 >
 
                 <RadioButton
+                    android:id="@+id/lyj_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="연하게"/>
 
                 <TextView
+                    android:id="@+id/lyj_lightWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -269,11 +276,13 @@
                 >
 
                 <RadioButton
+                    android:id="@+id/lyj_addShot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="샷 추가"/>
 
                 <TextView
+                    android:id="@+id/lyj_addShotWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -289,11 +298,13 @@
                 >
 
                 <RadioButton
+                    android:id="@+id/lyj_addTwoShot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="2샷 추가"/>
 
                 <TextView
+                    android:id="@+id/lyj_addTwoShotWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
