@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.Toast
 import androidx.constraintlayout.widget.Placeholder
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager2: ViewPager2
 
     lateinit var lyj_cardBtn: Button
+    lateinit var lyj_payBtn: LinearLayout
 
     // 리스트 추가
     private val fragments = listOf(
@@ -38,9 +40,14 @@ class MainActivity : AppCompatActivity() {
         title = "LYJ KIOSK"
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
+        lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_goHome.setOnClickListener {
             val intent = Intent(this, LoadingActivity::class.java)
             startActivity(intent)
+        }
+        lyj_payBtn.setOnClickListener {
+            val dialog = payCardDialog()
+            dialog.show(this.supportFragmentManager, "CustomDialog")
         }
 
         // 초기화

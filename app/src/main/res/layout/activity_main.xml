@@ -308,6 +308,7 @@
                     <!--                        android:textSize="14dp"/>-->
                     <!--                    <div> 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/smashingstocks" title="smashingstocks"> smashingstocks </a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com'</a></div>-->
                     <LinearLayout
+                        android:id="@+id/lyj_payBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/round_button"
