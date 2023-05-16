@@ -44,6 +44,7 @@
                             android:padding="16dp" />
 
                         <TextView
+                            android:id="@+id/lyj_hot_ameri_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -53,12 +54,27 @@
                             android:textSize="14dp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="2500원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/lyj_hot_ameri_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2500"
+                                android:textColor="#FF1F1F"
+                                android:textSize="14dp" />
+                            <TextView
+                                android:id="@+id/lyj_hot_ameri_won"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="원"
+                                android:textColor="#FF1F1F"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+
                     </LinearLayout>
 
                     <LinearLayout

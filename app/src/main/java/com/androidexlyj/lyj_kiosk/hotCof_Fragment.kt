@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.LinearLayout
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,11 +36,16 @@ class hotCof_Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_hotcof, container, false)
         val lyj_hot_ameri = view.findViewById<LinearLayout>(R.id.lyj_hot_ameri)
+        val lyj_hot_ameri_text = view.findViewById<TextView>(R.id.lyj_hot_ameri_text)
+        val lyj_hot_ameri_price = view.findViewById<TextView>(R.id.lyj_hot_ameri_price)
 
         lyj_hot_ameri.setOnClickListener {
             /*Toast.makeText(context, "짧은 토스트 메시지입니다.",Toast.LENGTH_SHORT).show()
             Log.d("click", "hi")*/
-            val dialog = optionDialog()
+            val id = resources.getResourceEntryName(R.id.lyj_hot_ameri)
+            val text = lyj_hot_ameri_text.text.toString()
+            val price = lyj_hot_ameri_price.text.toString().toInt()
+            val dialog = optionDialog(id, text,price)
             dialog.show(activity?.supportFragmentManager!!, "CustomDialog")
 
         }

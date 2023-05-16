@@ -7,10 +7,11 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class optionDialog : DialogFragment() {
+class optionDialog(private val id: String, private val text: String, private val price: Int) : DialogFragment() {
 //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
     override fun onCreateView(
@@ -19,6 +20,8 @@ class optionDialog : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.dialog_option_menu, container, false)
+        val lyj_optionMenuName = view.findViewById<TextView>(R.id.lyj_optionMenuName)
+        val lyj_optionMenuPrice= view.findViewById<TextView>(R.id.lyj_optionMenuPrice)
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         val lyj_optionCart = view.findViewById<Button>(R.id.lyj_optionCart)
 
@@ -27,9 +30,14 @@ class optionDialog : DialogFragment() {
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-    dialog?.setCancelable(true)
+        dialog?.setCancelable(true)
 
+        /*Toast.makeText(context,id, Toast.LENGTH_SHORT).show()*/
+    Toast.makeText(context,price.toString(), Toast.LENGTH_SHORT).show()
 
+        // 상품명 넣기
+    lyj_optionMenuName.text = text
+    lyj_optionMenuPrice.text = price.toString()
 
 
         lyj_optionDel.setOnClickListener {
