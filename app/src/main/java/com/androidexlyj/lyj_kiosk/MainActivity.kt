@@ -100,9 +100,13 @@ class MainActivity : AppCompatActivity() {
         }.attach()
         // attach로 TabLayout, ViewPager 연결
 
-        lyj_itemList = ArrayList()  // 초기화
+        // 초기화
+        lyj_itemList = ArrayList()
         lyj_adapter = RecyclerViewAdapter(lyj_itemList)
+
+        // 어댑터 설정
         lyj_recyclerView.adapter = lyj_adapter
+        // 아이템 수직 배치
         lyj_recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
