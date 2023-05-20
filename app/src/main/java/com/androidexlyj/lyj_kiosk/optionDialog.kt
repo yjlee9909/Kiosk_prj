@@ -86,7 +86,9 @@ class optionDialog(private val id: String, private val text: String, private val
         }
 
         lyj_optionCart.setOnClickListener {
-            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
+            val mainActivity = activity as MainActivity
+            mainActivity.addNewItem()
             dismiss()
         }
 

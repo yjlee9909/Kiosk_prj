@@ -1,5 +1,6 @@
 package com.androidexlyj.lyj_kiosk
 
+import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,8 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.Placeholder
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -29,6 +32,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_cardBtn: Button
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
+    lateinit var lyj_recyclerView: RecyclerView
+    lateinit var lyj_adapter : RecyclerViewAdapter
+    lateinit var lyj_itemList : ArrayList<ItemData>
 
     // 리스트 추가
     private val fragments = listOf(
@@ -42,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         title = "LYJ KIOSK"
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
+        lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {
@@ -93,7 +100,19 @@ class MainActivity : AppCompatActivity() {
         }.attach()
         // attach로 TabLayout, ViewPager 연결
 
+        lyj_itemList = ArrayList()  // 초기화
+        lyj_adapter = RecyclerViewAdapter(lyj_itemList)
+        lyj_recyclerView.adapter = lyj_adapter
+        lyj_recyclerView.layoutManager = LinearLayoutManager(this)
 
+    }
+
+    fun addNewItem() {
+        // itemList에 새로운 데이터 추가하여 어댑터에 알리기
+        val newData = ItemData("이름","가격")
+        lyj_itemList.add(newData)
+        lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
+        lyj_adapter.notifyDataSetChanged()
     }
 
     class ViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
