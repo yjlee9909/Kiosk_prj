@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_goHome: ImageButton
     lateinit var tabLayout: TabLayout
     lateinit var viewPager2: ViewPager2
-
+    lateinit var lyj_delAllBtn: Button
     lateinit var lyj_cardBtn: Button
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
@@ -49,11 +49,16 @@ class MainActivity : AppCompatActivity() {
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
+        lyj_delAllBtn = findViewById<Button>(R.id.lyj_delAllBtn)
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {
             val intent = Intent(this, LoadingActivity::class.java)
             startActivity(intent)
+        }
+        lyj_delAllBtn.setOnClickListener {
+            clearItemListAll()
+            Toast.makeText(applicationContext,"주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
             val dialog = payCardDialog()
@@ -109,6 +114,12 @@ class MainActivity : AppCompatActivity() {
         // 아이템 수직 배치
         lyj_recyclerView.layoutManager = LinearLayoutManager(this)
 
+    }
+
+    // 리스트 전체 삭제
+    private fun clearItemListAll() {
+        lyj_itemList.clear()
+        lyj_adapter.notifyDataSetChanged()
     }
 
     fun addNewItem() {

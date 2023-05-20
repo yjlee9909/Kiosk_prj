@@ -259,6 +259,7 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/lyj_delAllBtn"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.5"
