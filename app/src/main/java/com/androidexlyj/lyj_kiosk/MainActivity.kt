@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
     lateinit var lyj_recyclerView: RecyclerView
-    lateinit var lyj_adapter : RecyclerViewAdapter
-    lateinit var lyj_itemList : ArrayList<ItemData>
+    lateinit var lyj_adapter: RecyclerViewAdapter
+    lateinit var lyj_itemList: ArrayList<ItemData>
 
     // 리스트 추가
     private val fragments = listOf(
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
         lyj_delAllBtn.setOnClickListener {
             clearItemListAll()
-            Toast.makeText(applicationContext,"주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
             val dialog = payCardDialog()
@@ -122,10 +122,15 @@ class MainActivity : AppCompatActivity() {
         lyj_adapter.notifyDataSetChanged()
     }
 
-    fun addNewItem() {
+    fun addNewItem(itemData: ItemData) {
         // itemList에 새로운 데이터 추가하여 어댑터에 알리기
-        val newData = ItemData("이름","가격")
+        /*val newData = ItemData("이름","가격")
         lyj_itemList.add(newData)
+        lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
+        lyj_adapter.notifyDataSetChanged()*/
+
+//        val newData = ItemData("이름","가격")
+        lyj_itemList.add(itemData)
         lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
         lyj_adapter.notifyDataSetChanged()
     }
@@ -143,7 +148,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 
 
     // 백버튼 막기

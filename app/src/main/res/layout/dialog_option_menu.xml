@@ -2,54 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     android:background="@drawable/dialog_round"
     android:minWidth="400dp"
     android:minHeight="300dp"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
+    android:orientation="vertical"
     android:paddingLeft="20dp"
+    android:paddingTop="20dp"
     android:paddingRight="20dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
-    android:orientation="vertical">
+    android:paddingBottom="20dp">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_marginBottom="5dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
+            android:text="선택하신 상품의 옵션상품을 선택해주세요"
             android:textColor="@color/black"
             android:textSize="16dp"
-            android:text="선택하신 상품의 옵션상품을 선택해주세요"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/option_border_white"
-        android:padding="10dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+        android:background="@drawable/option_border_white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
         <ImageView
             android:id="@+id/lyj_optionMenuImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
             android:background="@drawable/card_payment"
             android:backgroundTint="@color/black"
-            android:padding="16dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
+            android:padding="16dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/lyj_optionMenuName"
                 android:layout_width="match_parent"
@@ -65,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lyj_optionMenuPrice"
                     android:layout_width="wrap_content"
@@ -72,6 +77,7 @@
                     android:text="100"
                     android:textColor="#FF1F1F"
                     android:textSize="14dp" />
+
                 <TextView
                     android:id="@+id/lyj_optionMenuPrice_won"
                     android:layout_width="wrap_content"
@@ -84,39 +90,43 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/lyj_optHotOrIce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_margin="5dp"
         android:background="@drawable/option_border_white"
-        android:padding="10dp"
-        android:layout_margin="5dp">
+        android:orientation="vertical"
+        android:padding="10dp">
         <!--        만약 메뉴가 티 종류라면 보여주기 그 외에는 안보이도록 설정하기 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
             android:text="뜨거운 (HOT) / 차가운 (ICE)"
-            android:layout_marginBottom="5dp"/>
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <RadioButton
                 android:id="@+id/lyj_optHot"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="뜨거운 (HOT)"/>
+                android:layout_weight="1"
+                android:text="뜨거운 (HOT)" />
+
             <RadioButton
                 android:id="@+id/lyj_optIce"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="차가운 (ICE)"/>
+                android:layout_weight="1"
+                android:text="차가운 (ICE)" />
         </RadioGroup>
     </LinearLayout>
     <!--<LinearLayout
@@ -206,19 +216,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_margin="5dp"
         android:background="@drawable/option_border_white"
-        android:padding="10dp"
-        android:layout_margin="5dp">
+        android:orientation="vertical"
+        android:padding="10dp">
         <!--        만약 메뉴가 티 종류라면 보여주기 그 외에는 안보이도록 설정하기 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
             android:text="농도(선택, 단일선택)"
-            android:layout_marginBottom="5dp"/>
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
         <RadioGroup
             android:id="@+id/lyj_shotRadio"
             android:layout_width="match_parent"
@@ -227,121 +238,123 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/lyj_basic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="기본"/>
+                    android:text="기본" />
 
                 <TextView
                     android:id="@+id/lyj_basicWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="#FF1F1F"
-                    android:text="+0원"/>
+                    android:text="+0원"
+                    android:textColor="#FF1F1F" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/lyj_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="연하게"/>
+                    android:text="연하게" />
 
                 <TextView
                     android:id="@+id/lyj_lightWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="#FF1F1F"
-                    android:text="+0원"/>
+                    android:text="+0원"
+                    android:textColor="#FF1F1F" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/lyj_addShot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="샷 추가"/>
+                    android:text="샷 추가" />
 
                 <TextView
                     android:id="@+id/lyj_addShotWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="#FF1F1F"
-                    android:text="+500원"/>
+                    android:text="+500원"
+                    android:textColor="#FF1F1F" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/lyj_addTwoShot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2샷 추가"/>
+                    android:text="2샷 추가" />
 
                 <TextView
                     android:id="@+id/lyj_addTwoShotWon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="#FF1F1F"
-                    android:text="+1000원"/>
+                    android:text="+1000원"
+                    android:textColor="#FF1F1F" />
 
             </LinearLayout>
         </RadioGroup>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp"
         android:paddingLeft="5dp"
+        android:paddingTop="15dp"
         android:paddingRight="5dp">
+
         <Button
             android:id="@+id/lyj_optionDel"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textColor="#006400"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:background="@drawable/stroke_btn"
             android:layout_marginRight="15dp"
-            android:text="취소"/>
+            android:layout_weight="1"
+            android:background="@drawable/stroke_btn"
+            android:text="취소"
+            android:textColor="#006400"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/lyj_optionCart"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="16dp"
+            android:layout_weight="1"
             android:background="#006400"
+            android:text="주문담기"
             android:textColor="@color/white"
-            android:text="주문담기"/>
+            android:textSize="16dp"
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>
 

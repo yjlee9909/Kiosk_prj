@@ -9,8 +9,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
-    class ViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
+class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
+    RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuName)
         val priceTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuPrice)
         val lyj_recyMenuDel: ImageButton = itemView.findViewById(R.id.lyj_recyMenuDel)
@@ -29,7 +30,8 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) : RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item, parent, false)
 
         return ViewHolder(itemView)
     }

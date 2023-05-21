@@ -45,14 +45,13 @@ class hotCof_Fragment : Fragment() {
             val id = resources.getResourceEntryName(R.id.lyj_hot_ameri)
             val text = lyj_hot_ameri_text.text.toString()
             val price = lyj_hot_ameri_price.text.toString().toInt()
-            val dialog = optionDialog(id, text,price)
+            val dialog = optionDialog(id, text, price)
             dialog.show(activity?.supportFragmentManager!!, "CustomDialog")
 
         }
 
         return view
     }
-
 
 
     companion object {

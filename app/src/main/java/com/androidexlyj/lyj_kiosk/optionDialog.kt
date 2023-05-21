@@ -13,7 +13,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class optionDialog(private val id: String, private val text: String, private val price: Int) : DialogFragment() {
+class optionDialog(private val id: String, private val text: String, private val price: Int) :
+    DialogFragment() {
 //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
 
@@ -32,19 +33,20 @@ class optionDialog(private val id: String, private val text: String, private val
     ): View? {
         val view = inflater.inflate(R.layout.dialog_option_menu, container, false)
         val lyj_optionMenuName = view.findViewById<TextView>(R.id.lyj_optionMenuName)
-        val lyj_optionMenuPrice= view.findViewById<TextView>(R.id.lyj_optionMenuPrice)
+        val lyj_optionMenuPrice = view.findViewById<TextView>(R.id.lyj_optionMenuPrice)
         val lyj_optHotOrIce = view.findViewById<LinearLayout>(R.id.lyj_optHotOrIce)
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
-    val lyj_shotRadio = view.findViewById<RadioGroup>(R.id.lyj_shotRadio)
+        val lyj_shotRadio = view.findViewById<RadioGroup>(R.id.lyj_shotRadio)
 
-    lyj_basic = view.findViewById(R.id.lyj_basic)
-     lyj_light = view.findViewById(R.id.lyj_light)
-     lyj_addShot = view.findViewById(R.id.lyj_addShot)
-     lyj_addTwoShot = view.findViewById(R.id.lyj_addTwoShot)
+        lyj_basic = view.findViewById(R.id.lyj_basic)
+        lyj_light = view.findViewById(R.id.lyj_light)
+        lyj_addShot = view.findViewById(R.id.lyj_addShot)
+        lyj_addTwoShot = view.findViewById(R.id.lyj_addTwoShot)
 
-        val params: WindowManager.LayoutParams = dialog?.window?.attributes as WindowManager.LayoutParams
+        val params: WindowManager.LayoutParams =
+            dialog?.window?.attributes as WindowManager.LayoutParams
         params.width = WindowManager.LayoutParams.MATCH_PARENT
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
@@ -52,7 +54,7 @@ class optionDialog(private val id: String, private val text: String, private val
         dialog?.setCancelable(true)
 
         /*Toast.makeText(context,id, Toast.LENGTH_SHORT).show()*/
-        Toast.makeText(context,price.toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, price.toString(), Toast.LENGTH_SHORT).show()
 
         // 상품명 넣기
         lyj_optionMenuName.text = text
@@ -96,18 +98,23 @@ class optionDialog(private val id: String, private val text: String, private val
             updateOptCartBtnState()
         }
 
-    updateOptCartBtnState()
+        updateOptCartBtnState()
 
 
 
-    lyj_optionDel.setOnClickListener {
+        lyj_optionDel.setOnClickListener {
             dismiss()
         }
 
+
+
         lyj_optionCart.setOnClickListener {
 //            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
+            val lyj_ItemName = lyj_optionMenuName.text.toString()
+            val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
+            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText)
             val mainActivity = activity as MainActivity
-            mainActivity.addNewItem()
+            mainActivity.addNewItem(lyj_itemData)
             dismiss()
         }
 
@@ -115,10 +122,6 @@ class optionDialog(private val id: String, private val text: String, private val
     }
 
 
-    /*override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }*/
     private fun updateOptCartBtnState() {
         val isAnyRadBtnSelected =
             lyj_basic.isChecked || lyj_light.isChecked || lyj_addShot.isChecked || lyj_addTwoShot.isChecked
@@ -129,11 +132,12 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
             lyj_optionCart.setTextColor(Color.parseColor("#FFFFFF"))
         } else {
+
             // 그게 아니라면 비활성화
             lyj_optionCart.setBackgroundResource(R.drawable.stroke_btn)
             lyj_optionCart.setTextColor(Color.parseColor("#006400"))
 
-            Toast.makeText(context,"옵션을 선택해주세요.",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context,"옵션을 선택해주세요.",Toast.LENGTH_SHORT).show()
         }
     }
 
