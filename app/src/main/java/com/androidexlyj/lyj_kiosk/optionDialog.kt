@@ -8,6 +8,7 @@ import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -15,6 +16,15 @@ import androidx.fragment.app.DialogFragment
 class optionDialog(private val id: String, private val text: String, private val price: Int) : DialogFragment() {
 //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
+
+    // 클래스의 멤버 변수로 선언하여 클래스 전체에서 참조 가능
+    private lateinit var lyj_basic: RadioButton
+    private lateinit var lyj_light: RadioButton
+    private lateinit var lyj_addShot: RadioButton
+    private lateinit var lyj_addTwoShot: RadioButton
+    private lateinit var lyj_optionCart: Button
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,12 +35,14 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optionMenuPrice= view.findViewById<TextView>(R.id.lyj_optionMenuPrice)
         val lyj_optHotOrIce = view.findViewById<LinearLayout>(R.id.lyj_optHotOrIce)
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
-        val lyj_optionCart = view.findViewById<Button>(R.id.lyj_optionCart)
+        lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
-    val lyj_basic = view.findViewById<RadioButton>(R.id.lyj_basic)
-    val lyj_light = view.findViewById<RadioButton>(R.id.lyj_light)
-    val lyj_addShot = view.findViewById<RadioButton>(R.id.lyj_addShot)
-    val lyj_addTwoShot = view.findViewById<RadioButton>(R.id.lyj_addTwoShot)
+    val lyj_shotRadio = view.findViewById<RadioGroup>(R.id.lyj_shotRadio)
+
+    lyj_basic = view.findViewById(R.id.lyj_basic)
+     lyj_light = view.findViewById(R.id.lyj_light)
+     lyj_addShot = view.findViewById(R.id.lyj_addShot)
+     lyj_addTwoShot = view.findViewById(R.id.lyj_addTwoShot)
 
         val params: WindowManager.LayoutParams = dialog?.window?.attributes as WindowManager.LayoutParams
         params.width = WindowManager.LayoutParams.MATCH_PARENT
@@ -60,28 +72,35 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_light.isChecked = false
             lyj_addShot.isChecked = false
             lyj_addTwoShot.isChecked = false
+            updateOptCartBtnState()
         }
-    lyj_light.setOnClickListener {
-        lyj_basic.isChecked = false
-        lyj_light.isChecked = true
-        lyj_addShot.isChecked = false
-        lyj_addTwoShot.isChecked = false
-    }
-    lyj_addShot.setOnClickListener {
-        lyj_basic.isChecked = false
-        lyj_light.isChecked = false
-        lyj_addShot.isChecked = true
-        lyj_addTwoShot.isChecked = false
-    }
-    lyj_addTwoShot.setOnClickListener {
-        lyj_basic.isChecked = false
-        lyj_light.isChecked = false
-        lyj_addShot.isChecked = false
-        lyj_addTwoShot.isChecked = true
-    }
+        lyj_light.setOnClickListener {
+            lyj_basic.isChecked = false
+            lyj_light.isChecked = true
+            lyj_addShot.isChecked = false
+            lyj_addTwoShot.isChecked = false
+            updateOptCartBtnState()
+        }
+        lyj_addShot.setOnClickListener {
+            lyj_basic.isChecked = false
+            lyj_light.isChecked = false
+            lyj_addShot.isChecked = true
+            lyj_addTwoShot.isChecked = false
+            updateOptCartBtnState()
+        }
+        lyj_addTwoShot.setOnClickListener {
+            lyj_basic.isChecked = false
+            lyj_light.isChecked = false
+            lyj_addShot.isChecked = false
+            lyj_addTwoShot.isChecked = true
+            updateOptCartBtnState()
+        }
+
+    updateOptCartBtnState()
 
 
-        lyj_optionDel.setOnClickListener {
+
+    lyj_optionDel.setOnClickListener {
             dismiss()
         }
 
@@ -94,11 +113,29 @@ class optionDialog(private val id: String, private val text: String, private val
 
         return view
     }
+
+
     /*override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }*/
+    private fun updateOptCartBtnState() {
+        val isAnyRadBtnSelected =
+            lyj_basic.isChecked || lyj_light.isChecked || lyj_addShot.isChecked || lyj_addTwoShot.isChecked
+        lyj_optionCart.isEnabled = isAnyRadBtnSelected
 
+        if (isAnyRadBtnSelected) {
+            // 라디오 버튼 선택된 경우 주문담기 버튼 활성화
+            lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
+            lyj_optionCart.setTextColor(Color.parseColor("#FFFFFF"))
+        } else {
+            // 그게 아니라면 비활성화
+            lyj_optionCart.setBackgroundResource(R.drawable.stroke_btn)
+            lyj_optionCart.setTextColor(Color.parseColor("#006400"))
+
+            Toast.makeText(context,"옵션을 선택해주세요.",Toast.LENGTH_SHORT).show()
+        }
+    }
 
 
 }
