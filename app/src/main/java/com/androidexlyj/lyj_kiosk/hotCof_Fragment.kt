@@ -43,8 +43,12 @@ class hotCof_Fragment : Fragment() {
             /*Toast.makeText(context, "짧은 토스트 메시지입니다.",Toast.LENGTH_SHORT).show()
             Log.d("click", "hi")*/
             val id = resources.getResourceEntryName(R.id.lyj_hot_ameri)
+
+            // 해당 정보
             val text = lyj_hot_ameri_text.text.toString()
             val price = lyj_hot_ameri_price.text.toString().toInt()
+
+            // 다이얼로그에 정보 전달
             val dialog = optionDialog(id, text, price)
             dialog.show(activity?.supportFragmentManager!!, "CustomDialog")
 

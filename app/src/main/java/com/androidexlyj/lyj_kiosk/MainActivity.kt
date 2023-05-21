@@ -130,6 +130,8 @@ class MainActivity : AppCompatActivity() {
         lyj_adapter.notifyDataSetChanged()*/
 
 //        val newData = ItemData("이름","가격")
+
+        // ItemData 객체를 전달받아서 리스트에 추가하기
         lyj_itemList.add(itemData)
         lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
         lyj_adapter.notifyDataSetChanged()
