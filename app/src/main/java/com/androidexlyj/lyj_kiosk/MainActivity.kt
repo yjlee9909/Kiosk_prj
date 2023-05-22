@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager2: ViewPager2
     lateinit var lyj_delAllBtn: Button
     lateinit var lyj_cardBtn: Button
+
+
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
     lateinit var lyj_recyclerView: RecyclerView
@@ -50,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
         lyj_delAllBtn = findViewById<Button>(R.id.lyj_delAllBtn)
+
+
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {

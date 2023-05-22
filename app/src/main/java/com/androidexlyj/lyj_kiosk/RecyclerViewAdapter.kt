@@ -8,13 +8,17 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuName)
         val priceTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuPrice)
+        val lyj_cnt: TextView = itemView.findViewById(R.id.lyj_cnt)
         val lyj_recyMenuDel: ImageButton = itemView.findViewById(R.id.lyj_recyMenuDel)
+        val lyj_minusBtn: ImageButton = itemView.findViewById(R.id.lyj_minusBtn)
+        val lyj_plusBtn: ImageButton = itemView.findViewById(R.id.lyj_plusBtn)
 
         init {
             // 삭제 버튼 클릭시 각 해당 리스트 삭제
@@ -26,6 +30,8 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
                     (itemView.context as MainActivity).lyj_adapter.notifyItemRemoved(position)
                 }
             }
+
+
         }
     }
 
@@ -43,6 +49,22 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
         holder.nameTextView.text = item.name
-        holder.priceTextView.text = item.price
+        holder.priceTextView.text = (item.price.toInt() * item.count).toString()
+        holder.lyj_cnt.text = item.count.toString()
+
+
+        holder.lyj_minusBtn.setOnClickListener {
+            if (item.count > 1) {
+                item.count--
+                holder.lyj_cnt.text = item.count.toString()
+                holder.priceTextView.text = (item.price.toInt() * item.count).toString()
+            }
+        }
+
+        holder.lyj_plusBtn.setOnClickListener {
+            item.count++
+            holder.lyj_cnt.text = item.count.toString()
+            holder.priceTextView.text = (item.price.toInt() * item.count).toString()
+        }
     }
 }

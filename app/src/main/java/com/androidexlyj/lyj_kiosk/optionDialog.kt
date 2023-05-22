@@ -112,9 +112,10 @@ class optionDialog(private val id: String, private val text: String, private val
 //            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
             val lyj_ItemName = lyj_optionMenuName.text.toString()
             val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
+            val lyj_ItemCnt = "1".toInt()
 
             // ItemData에 값 전달
-            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText)
+            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt)
             val mainActivity = activity as MainActivity
             // 아이템 추가
             mainActivity.addNewItem(lyj_itemData)
