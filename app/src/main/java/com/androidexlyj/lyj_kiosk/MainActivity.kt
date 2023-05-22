@@ -61,11 +61,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
-            val dialog = payCardDialog()
+            val dialog = takeDialog()
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
         lyj_payImgBtn.setOnClickListener {
-            val dialog = payCardDialog()
+            val dialog = takeDialog()
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
 

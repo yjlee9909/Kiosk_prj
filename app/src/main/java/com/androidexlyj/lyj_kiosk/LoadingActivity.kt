@@ -9,7 +9,8 @@ import android.widget.ImageView
 
 class LoadingActivity : AppCompatActivity() {
 
-    lateinit var button: Button
+    lateinit var lyj_takeOutBtn: Button
+    lateinit var lyj_eatRightBtn: Button
     lateinit var imgView: ImageView
     var backKeyPressedTime: Long = 0
 
@@ -17,10 +18,15 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
-        button = findViewById<Button>(R.id.lyj_goOrder)
+        lyj_takeOutBtn = findViewById<Button>(R.id.lyj_takeOut)
+        lyj_eatRightBtn = findViewById<Button>(R.id.lyj_eatRight)
         imgView = findViewById<ImageView>(R.id.imageView)
 
-        button.setOnClickListener {
+        lyj_takeOutBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        lyj_eatRightBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

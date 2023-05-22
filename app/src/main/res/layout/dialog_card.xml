@@ -82,7 +82,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/stroke_btn"
+        android:background="@drawable/option_border_white"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -138,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
+                android:textSize="16dp"
                 android:text="****-****-****-****"
                 android:textColor="#7C7C7C"
                 android:textStyle="bold" />
