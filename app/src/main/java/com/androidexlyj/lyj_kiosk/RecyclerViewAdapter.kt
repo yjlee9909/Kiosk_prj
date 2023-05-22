@@ -47,7 +47,10 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // 아이템 데이터 가져오기
         val item = itemList[position]
+
+        // 뷰홀더에 데이터 설정
         holder.nameTextView.text = item.name
         holder.priceTextView.text = (item.price.toInt() * item.count).toString()
         holder.lyj_cnt.text = item.count.toString()
