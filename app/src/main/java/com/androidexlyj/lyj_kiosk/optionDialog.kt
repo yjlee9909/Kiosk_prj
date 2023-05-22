@@ -1,6 +1,5 @@
 package com.androidexlyj.lyj_kiosk
 
-import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -38,6 +37,9 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
+        var lyj_plusOptShot = ""
+        var lyj_plusOptShotPrice = 0
+
         val lyj_shotRadio = view.findViewById<RadioGroup>(R.id.lyj_shotRadio)
 
         lyj_basic = view.findViewById(R.id.lyj_basic)
@@ -74,6 +76,14 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_light.isChecked = false
             lyj_addShot.isChecked = false
             lyj_addTwoShot.isChecked = false
+
+            val lyj_optShotName = view.findViewById<TextView>(R.id.lyj_basic)
+            val lyj_optShotPrice = view.findViewById<TextView>(R.id.lyj_basicWon)
+
+            // 해당 text 정보 뽑아서 전달하기
+            lyj_plusOptShot = lyj_optShotName.text.toString()
+            lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
+
             updateOptCartBtnState()
         }
         lyj_light.setOnClickListener {
@@ -81,6 +91,14 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_light.isChecked = true
             lyj_addShot.isChecked = false
             lyj_addTwoShot.isChecked = false
+
+            val lyj_optShotName = view.findViewById<TextView>(R.id.lyj_light)
+            val lyj_optShotPrice = view.findViewById<TextView>(R.id.lyj_lightWon)
+
+            // 해당 text 정보 뽑아서 전달하기
+            lyj_plusOptShot = lyj_optShotName.text.toString()
+            lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
+
             updateOptCartBtnState()
         }
         lyj_addShot.setOnClickListener {
@@ -88,6 +106,13 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_light.isChecked = false
             lyj_addShot.isChecked = true
             lyj_addTwoShot.isChecked = false
+
+            val lyj_optShotName = view.findViewById<TextView>(R.id.lyj_addShot)
+            val lyj_optShotPrice = view.findViewById<TextView>(R.id.lyj_addShotWon)
+
+            // 해당 text 정보 뽑아서 전달하기
+            lyj_plusOptShot = lyj_optShotName.text.toString()
+            lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
             updateOptCartBtnState()
         }
         lyj_addTwoShot.setOnClickListener {
@@ -95,6 +120,14 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_light.isChecked = false
             lyj_addShot.isChecked = false
             lyj_addTwoShot.isChecked = true
+
+            val lyj_optShotName = view.findViewById<TextView>(R.id.lyj_addTwoShot)
+            val lyj_optShotPrice = view.findViewById<TextView>(R.id.lyj_addTwoShotWon)
+
+            // 해당 text 정보 뽑아서 전달하기
+            lyj_plusOptShot = lyj_optShotName.text.toString()
+            lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
+
             updateOptCartBtnState()
         }
 
@@ -109,13 +142,14 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
         lyj_optionCart.setOnClickListener {
-//            Toast.makeText(context,"주문이 담겼습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,lyj_plusOptShot, Toast.LENGTH_SHORT).show()
             val lyj_ItemName = lyj_optionMenuName.text.toString()
             val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
             val lyj_ItemCnt = "1".toInt()
+//            val lyj_plusOptShot =
 
             // ItemData에 값 전달
-            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt)
+            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt, lyj_plusOptShot, lyj_plusOptShotPrice)
             val mainActivity = activity as MainActivity
             // 아이템 추가
             mainActivity.addNewItem(lyj_itemData)

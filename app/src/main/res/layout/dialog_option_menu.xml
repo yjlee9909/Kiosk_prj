@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/option_border"
+        android:background="@drawable/option_border_white"
         android:padding="10dp"
         android:layout_margin="5dp">
 
@@ -248,13 +248,33 @@
                     android:layout_height="wrap_content"
                     android:text="기본" />
 
-                <TextView
-                    android:id="@+id/lyj_basicWon"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="+0원"
-                    android:textColor="#FF1F1F" />
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:id="@+id/lyj_basicWon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="원"
+                        android:textColor="#FF1F1F" />
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
@@ -270,13 +290,33 @@
                     android:layout_height="wrap_content"
                     android:text="연하게" />
 
-                <TextView
-                    android:id="@+id/lyj_lightWon"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="+0원"
-                    android:textColor="#FF1F1F" />
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:id="@+id/lyj_lightWon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="원"
+                        android:textColor="#FF1F1F" />
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
@@ -292,13 +332,32 @@
                     android:layout_height="wrap_content"
                     android:text="샷 추가" />
 
-                <TextView
-                    android:id="@+id/lyj_addShotWon"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="+500원"
-                    android:textColor="#FF1F1F" />
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:id="@+id/lyj_addShotWon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="500"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="원"
+                        android:textColor="#FF1F1F" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -314,13 +373,32 @@
                     android:layout_height="wrap_content"
                     android:text="2샷 추가" />
 
-                <TextView
-                    android:id="@+id/lyj_addTwoShotWon"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="+1000원"
-                    android:textColor="#FF1F1F" />
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:id="@+id/lyj_addTwoShotWon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1000"
+                        android:textColor="#FF1F1F" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="원"
+                        android:textColor="#FF1F1F" />
+                </LinearLayout>
+
 
             </LinearLayout>
         </RadioGroup>

@@ -15,6 +15,9 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuName)
         val priceTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuPrice)
+        val lyj_optionPlusShot: TextView = itemView.findViewById(R.id.lyj_optionPlusShot)
+        val lyj_optionPlusShotPrice: TextView = itemView.findViewById(R.id.lyj_optionPlusShotPrice)
+
         val lyj_cnt: TextView = itemView.findViewById(R.id.lyj_cnt)
         val lyj_recyMenuDel: ImageButton = itemView.findViewById(R.id.lyj_recyMenuDel)
         val lyj_minusBtn: ImageButton = itemView.findViewById(R.id.lyj_minusBtn)
@@ -51,9 +54,12 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
         val item = itemList[position]
 
         // 뷰홀더에 데이터 설정
-        holder.nameTextView.text = item.name
+         holder.nameTextView.text = item.name
         holder.priceTextView.text = (item.price.toInt() * item.count).toString()
         holder.lyj_cnt.text = item.count.toString()
+
+        holder.lyj_optionPlusShot.text = item.optShotName.toString()
+        holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
 
 
         holder.lyj_minusBtn.setOnClickListener {
@@ -61,6 +67,7 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
                 item.count--
                 holder.lyj_cnt.text = item.count.toString()
                 holder.priceTextView.text = (item.price.toInt() * item.count).toString()
+                holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
             }
         }
 
@@ -68,6 +75,7 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
             item.count++
             holder.lyj_cnt.text = item.count.toString()
             holder.priceTextView.text = (item.price.toInt() * item.count).toString()
+            holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
         }
     }
 }
