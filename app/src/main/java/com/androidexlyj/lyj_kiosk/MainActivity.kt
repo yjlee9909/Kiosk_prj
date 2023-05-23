@@ -63,12 +63,12 @@ private var lyj_totalCount = 0
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
-            val dialog = listDialog(lyj_totalPrice.text.toString(), lyj_totalCount.toString())
+            val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(), lyj_totalCount.toString(),::updateTotalPrice)
             dialog.show(this.supportFragmentManager, "CustomDialog")
 //            Toast.makeText(applicationContext, lyj_totalCount.toString(), Toast.LENGTH_SHORT).show()
         }
         lyj_payImgBtn.setOnClickListener {
-            val dialog = listDialog(lyj_totalPrice.text.toString(),lyj_totalCount.toString())
+            val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(),lyj_totalCount.toString(),::updateTotalPrice)
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
 
