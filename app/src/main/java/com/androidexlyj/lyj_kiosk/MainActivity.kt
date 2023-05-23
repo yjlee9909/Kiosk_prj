@@ -59,11 +59,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
-            val dialog = takeDialog()
+            val dialog = takeDialog(lyj_totalPrice.text.toString())
             dialog.show(this.supportFragmentManager, "CustomDialog")
+//            Toast.makeText(applicationContext, lyj_totalPrice.text.toString(), Toast.LENGTH_SHORT).show()
         }
         lyj_payImgBtn.setOnClickListener {
-            val dialog = takeDialog()
+            val dialog = takeDialog(lyj_totalPrice.text.toString())
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
 

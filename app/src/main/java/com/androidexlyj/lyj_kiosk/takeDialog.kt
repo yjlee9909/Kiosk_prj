@@ -2,16 +2,16 @@ package com.androidexlyj.lyj_kiosk
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class takeDialog : DialogFragment() {
+class takeDialog(private val totalPrice: String) : DialogFragment() {
     //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
     private lateinit var lyj_eatRight: Button
@@ -53,7 +53,8 @@ class takeDialog : DialogFragment() {
 
 
         lyj_takeNext.setOnClickListener {
-            val dialog = payCardDialog()
+            Toast.makeText(context, totalPrice, Toast.LENGTH_SHORT).show()
+            val dialog = payCardDialog(totalPrice.toString())
             dialog.show(parentFragmentManager, "CustomDialog")
             dismiss()
         }

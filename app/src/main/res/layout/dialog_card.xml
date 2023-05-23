@@ -65,11 +65,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/lyj_totalPriceDialog"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:text="3500원"
+                android:text="353300원"
                 android:textColor="#FF0000"
                 android:textSize="16dp"
                 android:textStyle="bold" />
