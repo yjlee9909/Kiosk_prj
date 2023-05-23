@@ -1,20 +1,14 @@
 package com.androidexlyj.lyj_kiosk
 
-import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TableLayout
+import android.widget.TextView
 import android.widget.Toast
-import androidx.constraintlayout.widget.Placeholder
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_delAllBtn: Button
     lateinit var lyj_cardBtn: Button
 
-
+    lateinit var lyj_totalPrice: TextView
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
     lateinit var lyj_recyclerView: RecyclerView
@@ -53,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
         lyj_delAllBtn = findViewById<Button>(R.id.lyj_delAllBtn)
 
-
+        lyj_totalPrice = findViewById(R.id.lyj_totalPrice)
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {
@@ -108,22 +102,32 @@ class MainActivity : AppCompatActivity() {
             tab.text = tabs[position]
         }.attach()
         // attach로 TabLayout, ViewPager 연결
-
+2
         // 초기화
         lyj_itemList = ArrayList()
-        lyj_adapter = RecyclerViewAdapter(lyj_itemList)
+        lyj_adapter = RecyclerViewAdapter(lyj_itemList,::updateTotalPrice)  // ::updateTotalPrice 함수 참조
 
         // 어댑터 설정
         lyj_recyclerView.adapter = lyj_adapter
         // 아이템 수직 배치
         lyj_recyclerView.layoutManager = LinearLayoutManager(this)
 
+        updateTotalPrice()
+
+
+
+    }
+
+    private fun updateTotalPrice() {
+        val totalPrice = lyj_adapter.getTotalPrice()
+        lyj_totalPrice.text = totalPrice.toString()
     }
 
     // 리스트 전체 삭제
     private fun clearItemListAll() {
         lyj_itemList.clear()
         lyj_adapter.notifyDataSetChanged()
+        updateTotalPrice()
     }
 
     fun addNewItem(itemData: ItemData) {
@@ -139,6 +143,8 @@ class MainActivity : AppCompatActivity() {
         lyj_itemList.add(itemData)
         lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
         lyj_adapter.notifyDataSetChanged()
+
+        updateTotalPrice()
     }
 
     class ViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {

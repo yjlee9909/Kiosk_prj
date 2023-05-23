@@ -1,16 +1,13 @@
 package com.androidexlyj.lyj_kiosk
 
-import android.content.ClipData
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 
-class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
+class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val updateTotalPrice: () -> Unit) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuName)
@@ -68,6 +65,7 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
                 holder.lyj_cnt.text = item.count.toString()
                 holder.priceTextView.text = (item.price.toInt() * item.count).toString()
                 holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+                updateTotalPrice()
             }
         }
 
@@ -76,6 +74,18 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>) :
             holder.lyj_cnt.text = item.count.toString()
             holder.priceTextView.text = (item.price.toInt() * item.count).toString()
             holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+            updateTotalPrice()
         }
+    }
+
+
+
+    fun getTotalPrice(): Int {
+        var totalPrice = 0
+        for(item in itemList) {
+            totalPrice += item.price.toInt()*item.count
+            totalPrice += item.optShotPrice.toInt()*item.count
+        }
+        return totalPrice
     }
 }
