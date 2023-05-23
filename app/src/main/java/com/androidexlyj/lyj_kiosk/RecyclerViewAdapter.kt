@@ -88,4 +88,11 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         }
         return totalPrice
     }
+    fun getTotalCount(): Int {
+        var totalCount = 0
+        for (item in itemList) {
+            totalCount += item.count
+        }
+        return totalCount
+    }
 }

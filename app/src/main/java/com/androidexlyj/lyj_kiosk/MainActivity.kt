@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_recyclerView: RecyclerView
     lateinit var lyj_adapter: RecyclerViewAdapter
     lateinit var lyj_itemList: ArrayList<ItemData>
+private var lyj_totalCount = 0
+
 
     // 리스트 추가
     private val fragments = listOf(
@@ -42,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "LYJ KIOSK"
+
+
 
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
@@ -59,12 +63,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
-            val dialog = takeDialog(lyj_totalPrice.text.toString())
+            val dialog = listDialog(lyj_totalPrice.text.toString(), lyj_totalCount.toString())
             dialog.show(this.supportFragmentManager, "CustomDialog")
-//            Toast.makeText(applicationContext, lyj_totalPrice.text.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(applicationContext, lyj_totalCount.toString(), Toast.LENGTH_SHORT).show()
         }
         lyj_payImgBtn.setOnClickListener {
-            val dialog = takeDialog(lyj_totalPrice.text.toString())
+            val dialog = listDialog(lyj_totalPrice.text.toString(),lyj_totalCount.toString())
             dialog.show(this.supportFragmentManager, "CustomDialog")
         }
 
@@ -121,7 +125,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateTotalPrice() {
         val totalPrice = lyj_adapter.getTotalPrice()
+        // Count 저장
+        val totalCount = lyj_adapter.getTotalCount()
         lyj_totalPrice.text = totalPrice.toString()
+        lyj_totalCount = totalCount
     }
 
     // 리스트 전체 삭제
