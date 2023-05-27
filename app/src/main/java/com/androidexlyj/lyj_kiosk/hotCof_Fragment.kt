@@ -42,7 +42,13 @@ class hotCof_Fragment : Fragment() {
         val linearLayouts = listOf<LinearLayout>(
             view.findViewById(R.id.lyj_hot_ameri),
             view.findViewById(R.id.lyj_hot_latte),
-            view.findViewById(R.id.lyj_hot_Vanilla_latte)
+            view.findViewById(R.id.lyj_hot_Vanilla_latte),
+            view.findViewById(R.id.lyj_hot_caramelMac),
+            view.findViewById(R.id.lyj_hot_cafeMocha),
+            view.findViewById(R.id.lyj_hot_cappuccino),
+            view.findViewById(R.id.lyj_hot_tiramisuLatte),
+            view.findViewById(R.id.lyj_hot_coldbrew),
+            view.findViewById(R.id.lyj_hot_coldbrewLatte)
         )
 
         for (linearLayout in linearLayouts) {
@@ -92,14 +98,13 @@ class hotCof_Fragment : Fragment() {
 
         if (text != null && price != null && imageDrawable != null) {
             // 다이얼로그에 정보 전달
-            val dialog = optionDialog(resources.getResourceEntryName(linearLayoutId),
+            val dialog = optionDialog(
+                resources.getResourceEntryName(linearLayoutId),
                 text!!, price!!, imageDrawable!!
             )
             dialog.show(activity?.supportFragmentManager!!, "CustomDialog")
         }
     }
-
-
 
 
     companion object {

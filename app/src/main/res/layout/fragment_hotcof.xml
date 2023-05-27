@@ -204,6 +204,7 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_caramelMac"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -214,12 +215,14 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_caramelMac_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/hot_cof"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_caramelMac_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="(HOT) 카라멜마끼아또"
@@ -237,6 +240,7 @@
                         >
 
                         <TextView
+                            android:id="@+id/lyj_hot_caramelMac_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -255,6 +259,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_cafeMocha"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -267,15 +272,17 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_cafeMocha_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/hot_cof"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_cafeMocha_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
+                        android:text="(HOT) 카페모카"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -290,6 +297,7 @@
                         >
 
                         <TextView
+                            android:id="@+id/lyj_hot_cafeMocha_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -308,6 +316,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_cappuccino"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -318,15 +327,17 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_cappuccino_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
+                        android:background="@drawable/hot_cof2"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_cappuccino_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
+                        android:text="(HOT) 카푸치노"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -340,6 +351,7 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/lyj_hot_cappuccino_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -366,10 +378,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
                 >
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_tiramisuLatte"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -380,15 +392,17 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_tiramisuLatte_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/hot_cof"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_tiramisuLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
+                        android:text="(HOT) 티라미수라떼"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:layout_marginTop="10dp"
@@ -403,6 +417,7 @@
                         >
 
                         <TextView
+                            android:id="@+id/lyj_hot_tiramisuLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -421,6 +436,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_coldbrew"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -433,15 +449,17 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_coldbrew_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
+                        android:background="@drawable/cold_brew"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_coldbrew_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
+                        android:text="(HOT) 콜드브루"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -456,6 +474,7 @@
                         >
 
                         <TextView
+                            android:id="@+id/lyj_hot_coldbrew_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -474,6 +493,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lyj_hot_coldbrewLatte"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -484,15 +504,17 @@
                     android:padding="5dp">
 
                     <ImageView
+                        android:id="@+id/lyj_hot_coldbrewLatte_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
+                        android:background="@drawable/latte"
                         android:padding="16dp" />
 
                     <TextView
+                        android:id="@+id/lyj_hot_coldbrewLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
+                        android:text="(HOT) 콜드브루라떼"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -506,6 +528,7 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/lyj_hot_coldbrewLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -522,349 +545,9 @@
 
 
                 </LinearLayout>
-
-
-
-                <!--                추가-->
 
 
             </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
-                >
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="11dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-                <!--                추가-->
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
-                >
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="11dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/hot_cof"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="(HOT) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-                <!--                추가-->
-
-
-            </LinearLayout>
-
 
 
         </LinearLayout>
