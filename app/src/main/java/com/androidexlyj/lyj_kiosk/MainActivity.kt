@@ -132,7 +132,7 @@ private var lyj_totalCount = 0
     }
 
     // 리스트 전체 삭제
-    private fun clearItemListAll() {
+    fun clearItemListAll() {
         lyj_itemList.clear()
         lyj_adapter.notifyDataSetChanged()
         updateTotalPrice()
