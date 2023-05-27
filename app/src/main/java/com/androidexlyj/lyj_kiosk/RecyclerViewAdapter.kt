@@ -28,6 +28,8 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
                     // MainActivity 접근
                     (itemView.context as MainActivity).lyj_itemList.removeAt(position)
                     (itemView.context as MainActivity).lyj_adapter.notifyItemRemoved(position)
+
+                    (itemView.context as MainActivity).updateTotalPrice()
                 }
             }
 

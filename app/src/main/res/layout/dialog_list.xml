@@ -7,6 +7,7 @@
     android:background="@drawable/dialog_round"
     android:minWidth="400dp"
     android:minHeight="300dp"
+
     android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
@@ -21,7 +22,7 @@
         android:layout_marginBottom="5dp"
         android:orientation="vertical">
 
-        <TextView
+       <!-- <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="주문내역확인"
@@ -29,7 +30,7 @@
             android:textSize="16dp"
             android:textStyle="bold"
 
-            />
+            />-->
 
         <TextView
             android:layout_width="match_parent"
@@ -46,11 +47,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/list_border"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="3"
@@ -69,9 +74,14 @@
                 android:text="가격"/>
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@drawable/list_border"
             android:id="@+id/lyj_recyclerViewItemResult"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="360dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -160,7 +170,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button

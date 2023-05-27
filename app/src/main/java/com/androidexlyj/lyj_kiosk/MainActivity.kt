@@ -123,7 +123,7 @@ private var lyj_totalCount = 0
 
     }
 
-    private fun updateTotalPrice() {
+    fun updateTotalPrice() {
         val totalPrice = lyj_adapter.getTotalPrice()
         // Count 저장
         val totalCount = lyj_adapter.getTotalCount()
