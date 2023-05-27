@@ -2,9 +2,11 @@ package com.androidexlyj.lyj_kiosk
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -12,7 +14,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class optionDialog(private val id: String, private val text: String, private val price: Int) :
+class optionDialog(private val id: String, private val text: String, private val price: Int, private val imageDrawable: Drawable) :
     DialogFragment() {
 //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
@@ -35,6 +37,8 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optionMenuPrice = view.findViewById<TextView>(R.id.lyj_optionMenuPrice)
         val lyj_optHotOrIce = view.findViewById<LinearLayout>(R.id.lyj_optHotOrIce)
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
+        val lyj_optionMenuImg = view.findViewById<ImageView>(R.id.lyj_optionMenuImg)
+
         lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
         var lyj_plusOptShot = ""
@@ -61,10 +65,12 @@ class optionDialog(private val id: String, private val text: String, private val
         // 상품명 넣기
         lyj_optionMenuName.text = text
         lyj_optionMenuPrice.text = price.toString()
+        lyj_optionMenuImg.background = imageDrawable
+
 
 
         // 탭별로 HOT / ICE 보여주기
-        if (id == "lyj_hot_ameri") {
+        if (id.contains("hot")) {
             lyj_optHotOrIce.visibility = View.GONE
         } else {
             lyj_optHotOrIce.visibility = View.VISIBLE

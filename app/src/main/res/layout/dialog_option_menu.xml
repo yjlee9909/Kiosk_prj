@@ -41,13 +41,11 @@
 
         <ImageView
             android:id="@+id/lyj_optionMenuImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
-            android:background="@drawable/card_payment"
-            android:backgroundTint="@color/black"
-            android:padding="16dp" />
+             />
 
         <LinearLayout
             android:layout_width="match_parent"
