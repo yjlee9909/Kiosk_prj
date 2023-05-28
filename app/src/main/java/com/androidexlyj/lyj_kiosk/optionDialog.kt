@@ -87,6 +87,11 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_optIce.isEnabled = false
             lyj_optHot.isChecked = true
             lyj_optHot.setTextColor(Color.RED)
+        } else if (id.contains("ice")) {
+            lyj_optHot.isEnabled = false
+            lyj_optIce.isEnabled = false
+            lyj_optIce.isChecked = true
+            lyj_optIce.setTextColor(Color.RED)
         } else {
             lyj_optHot.isEnabled = true
 
