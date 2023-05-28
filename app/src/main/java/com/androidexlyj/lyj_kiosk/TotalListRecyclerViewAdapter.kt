@@ -15,6 +15,7 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         val lyj_optionPlusShotList: TextView = itemView.findViewById(R.id.lyj_optionPlusShotList)
         val lyj_optionPlusShotPriceList: TextView = itemView.findViewById(R.id.lyj_optionPlusShotPriceList)
         val lyj_cntList: TextView = itemView.findViewById(R.id.lyj_cntList)
+        val lyj_optionHotIceMenuText: TextView = itemView.findViewById(R.id.lyj_optionHotIceMenuText)
 
     }
 
@@ -40,6 +41,8 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
 
         holder.lyj_optionPlusShotList.text = item.optShotName.toString()
         holder.lyj_optionPlusShotPriceList.text = (item.optShotPrice.toInt()*item.count).toString()
+
+        holder.lyj_optionHotIceMenuText.text = item.selectedHotIceOption
 
     }
 

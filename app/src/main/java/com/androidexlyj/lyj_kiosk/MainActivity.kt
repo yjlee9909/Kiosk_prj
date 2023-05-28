@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_recyclerView: RecyclerView
     lateinit var lyj_adapter: RecyclerViewAdapter
     lateinit var lyj_itemList: ArrayList<ItemData>
-private var lyj_totalCount = 0
-
+    private var lyj_totalCount = 0
+    private var isHotIceTab = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,6 +101,30 @@ private var lyj_totalCount = 0
             tab.text = tabs[position]
         }.attach()
         // attach로 TabLayout, ViewPager 연결
+
+
+        /*// 탭 별로 HOT / ICE 옵션 안보이게
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val position = tab?.position
+                if (position == 0 || position == 1) {
+                    isHotIceTab = (position == 0)
+                    lyj_adapter.setIsHotIceTab(isHotIceTab)
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                val position = tab?.position
+                if (position == 0 || position == 1) {
+                    // HOT / ICE 탭 선택 해제시 hot/ice 옵션 메뉴
+                    lyj_adapter.setIsHotIceTab(false)
+                }
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                TODO("Not yet implemented")
+            }
+        })*/
 
         // 초기화
         lyj_itemList = ArrayList()

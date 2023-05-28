@@ -4,11 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val updateTotalPrice: () -> Unit) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuName)
         val priceTextView: TextView = itemView.findViewById(R.id.lyj_recyMenuPrice)
@@ -19,6 +22,10 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         val lyj_recyMenuDel: ImageButton = itemView.findViewById(R.id.lyj_recyMenuDel)
         val lyj_minusBtn: ImageButton = itemView.findViewById(R.id.lyj_minusBtn)
         val lyj_plusBtn: ImageButton = itemView.findViewById(R.id.lyj_plusBtn)
+
+        val lyj_optionHotIce: TextView = itemView.findViewById(R.id.lyj_optionHotIce)
+
+        val lyj_optionHotIceMenu: LinearLayout = itemView.findViewById(R.id.lyj_optionHotIceMenu)
 
         init {
             // 삭제 버튼 클릭시 각 해당 리스트 삭제
@@ -59,6 +66,16 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
 
         holder.lyj_optionPlusShot.text = item.optShotName.toString()
         holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+        holder.lyj_optionHotIce.text = item.selectedHotIceOption
+
+        /*// 커피 HOT / ICE 옵션 뷰 가시성 설정
+        if (isHotIceTab) {
+            holder.lyj_optionHotIceMenu.visibility = View.GONE
+        } else {
+            holder.lyj_optionHotIceMenu.visibility = View.VISIBLE
+        }*/
+
+
 
 
         holder.lyj_minusBtn.setOnClickListener {
@@ -97,4 +114,10 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         }
         return totalCount
     }
+
+    // HOT / ICE 인 경우 옵션 안보이게
+    /*fun setIsHotIceTab(isHotIceTab: Boolean) {
+        this.isHotIceTab = isHotIceTab
+        notifyDataSetChanged()
+    }*/
 }

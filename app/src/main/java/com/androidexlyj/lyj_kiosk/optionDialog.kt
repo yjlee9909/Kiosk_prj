@@ -26,6 +26,9 @@ class optionDialog(private val id: String, private val text: String, private val
     private lateinit var lyj_addTwoShot: RadioButton
     private lateinit var lyj_optionCart: Button
 
+    private lateinit var lyj_optHot: RadioButton
+    private lateinit var lyj_optIce: RadioButton
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,6 +42,10 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         val lyj_optionMenuImg = view.findViewById<ImageView>(R.id.lyj_optionMenuImg)
 
+
+
+        lyj_optHot = view.findViewById(R.id.lyj_optHot)
+        lyj_optIce = view.findViewById(R.id.lyj_optIce)
         lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
         var lyj_plusOptShot = ""
@@ -70,10 +77,19 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
         // 탭별로 HOT / ICE 보여주기
-        if (id.contains("hot")||id.contains("ice")) {
+        /*if (id.contains("hot")||id.contains("ice")) {
             lyj_optHotOrIce.visibility = View.GONE
         } else {
             lyj_optHotOrIce.visibility = View.VISIBLE
+        }*/
+        if (id.contains("hot")) {
+            lyj_optHot.isEnabled = false
+            lyj_optIce.isEnabled = false
+            lyj_optHot.isChecked = true
+            lyj_optHot.setTextColor(Color.RED)
+        } else {
+            lyj_optHot.isEnabled = true
+
         }
 
         // 라디오버튼 하나만 선택가능하도록
@@ -152,10 +168,13 @@ class optionDialog(private val id: String, private val text: String, private val
             val lyj_ItemName = lyj_optionMenuName.text.toString()
             val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
             val lyj_ItemCnt = "1".toInt()
-//            val lyj_plusOptShot =
+            val selectedHotIceOption: String
+
+            selectedHotIceOption = if (lyj_optHot.isChecked) "뜨거운 (HOT)"
+            else if (lyj_optIce.isChecked) "차가운 (ICE)" else ""
 
             // ItemData에 값 전달
-            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt, lyj_plusOptShot, lyj_plusOptShotPrice)
+            val lyj_itemData = ItemData(lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt, selectedHotIceOption, lyj_plusOptShot, lyj_plusOptShotPrice)
             val mainActivity = activity as MainActivity
             // 아이템 추가
             mainActivity.addNewItem(lyj_itemData)
