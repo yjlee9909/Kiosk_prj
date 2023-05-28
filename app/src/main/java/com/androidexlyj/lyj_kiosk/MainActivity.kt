@@ -3,6 +3,7 @@ package com.androidexlyj.lyj_kiosk
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager2: ViewPager2
     lateinit var lyj_delAllBtn: Button
     lateinit var lyj_cardBtn: Button
-
+    lateinit var lyj_120CountDown: TextView
     lateinit var lyj_totalPrice: TextView
     lateinit var lyj_payBtn: LinearLayout
     lateinit var lyj_payImgBtn: ImageView
@@ -33,6 +34,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var lyj_itemList: ArrayList<ItemData>
     private var lyj_totalCount = 0
     private var isHotIceTab = true
+
+    private lateinit var countDownTimer: CountDownTimer
+    private var isCountDownRunning = false
+    private val COUNTDOWN_TIME = 300000 // 120초를 밀리초로 표현
+    private val COUNTDOWN_INTERVAL = 1000 // 카운트다운 간격을 1초로 설정
+    private var initialCountDownTime : Long = COUNTDOWN_TIME.toLong()
+    private var isPaused = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         lyj_goHome = findViewById<ImageButton>(R.id.lyj_goHome)
         lyj_recyclerView = findViewById<RecyclerView>(R.id.lyj_recyclerView)
         lyj_delAllBtn = findViewById<Button>(R.id.lyj_delAllBtn)
+        lyj_120CountDown = findViewById<TextView>(R.id.lyj_120CountDown)
 
         lyj_totalPrice = findViewById(R.id.lyj_totalPrice)
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
@@ -138,8 +147,8 @@ class MainActivity : AppCompatActivity() {
         updateTotalPrice()
 
 
-
     }
+
 
     fun updateTotalPrice() {
         val totalPrice = lyj_adapter.getTotalPrice()
@@ -154,23 +163,62 @@ class MainActivity : AppCompatActivity() {
         lyj_itemList.clear()
         lyj_adapter.notifyDataSetChanged()
         updateTotalPrice()
+
+        resetCountDown()
     }
 
     fun addNewItem(itemData: ItemData) {
-        // itemList에 새로운 데이터 추가하여 어댑터에 알리기
-        /*val newData = ItemData("이름","가격")
-        lyj_itemList.add(newData)
-        lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
-        lyj_adapter.notifyDataSetChanged()*/
-
-//        val newData = ItemData("이름","가격")
-
         // ItemData 객체를 전달받아서 리스트에 추가하기
         lyj_itemList.add(itemData)
         lyj_adapter.notifyItemInserted(lyj_itemList.size - 1)
         lyj_adapter.notifyDataSetChanged()
-
         updateTotalPrice()
+        resetCountDown()
+    }
+
+    private fun resetCountDown() {
+        stopCountDown()
+        startCountDown()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (!isPaused) {
+            startCountDown()
+
+        }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        stopCountDown()
+    }
+
+    private fun stopCountDown() {
+        if (isCountDownRunning) {
+            countDownTimer.cancel()
+        }
+        isCountDownRunning = false
+    }
+
+    private fun startCountDown() {
+        // 카운트다운 시간 초기화
+        initialCountDownTime = COUNTDOWN_TIME.toLong()
+        countDownTimer = object : CountDownTimer(COUNTDOWN_TIME.toLong(), COUNTDOWN_INTERVAL.toLong()) {
+            override fun onTick(millisUntilFinished: Long) {
+                val second = millisUntilFinished / 1000
+                lyj_120CountDown.text = second.toString()
+                initialCountDownTime = millisUntilFinished // 카운트 시간 업데이트
+            }
+
+            override fun onFinish() {
+                clearItemListAll()
+                val intent = Intent(this@MainActivity, LoadingActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(applicationContext, "주문 시간이 만료되었습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+        countDownTimer.start()
+        isCountDownRunning = true
     }
 
     class ViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
