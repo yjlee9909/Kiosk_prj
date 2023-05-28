@@ -70,7 +70,7 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
         // 탭별로 HOT / ICE 보여주기
-        if (id.contains("hot")) {
+        if (id.contains("hot")||id.contains("ice")) {
             lyj_optHotOrIce.visibility = View.GONE
         } else {
             lyj_optHotOrIce.visibility = View.VISIBLE

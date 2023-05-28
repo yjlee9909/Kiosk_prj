@@ -34,11 +34,6 @@ class MainActivity : AppCompatActivity() {
 private var lyj_totalCount = 0
 
 
-    // 리스트 추가
-    private val fragments = listOf(
-        hotCof_Fragment()
-    )
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,7 +102,7 @@ private var lyj_totalCount = 0
             tab.text = tabs[position]
         }.attach()
         // attach로 TabLayout, ViewPager 연결
-2
+
         // 초기화
         lyj_itemList = ArrayList()
         lyj_adapter = RecyclerViewAdapter(lyj_itemList,::updateTotalPrice)  // ::updateTotalPrice 함수 참조
