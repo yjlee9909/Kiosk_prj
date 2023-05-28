@@ -76,8 +76,7 @@ private var lyj_totalCount = 0
         val tabs = listOf(
             "커피(HOT)",
             "커피(ICE)",
-            "에이드&주스",
-            "티(Tea)",
+            "에이드&티",
             "음료",
             "디저트"
         )
@@ -151,13 +150,14 @@ private var lyj_totalCount = 0
     }
 
     class ViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-        override fun getItemCount(): Int = 6
+        override fun getItemCount(): Int = 5
 
         // Fragment 연결
         override fun createFragment(position: Int): Fragment {
             return when (position) {
                 0 -> hotCof_Fragment()
                 1 -> iceCof_Fragment()
+                2 -> adeTea_Fragment()
                 else -> iceCof_Fragment()
             }
         }
