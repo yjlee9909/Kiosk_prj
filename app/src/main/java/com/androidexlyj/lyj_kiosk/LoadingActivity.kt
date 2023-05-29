@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 
 
 class LoadingActivity : AppCompatActivity() {
 
-    lateinit var lyj_takeOutBtn: Button
-    lateinit var lyj_eatRightBtn: Button
+    lateinit var lyj_goOrder: LinearLayout
     lateinit var imgView: ImageView
     var backKeyPressedTime: Long = 0
 
@@ -18,15 +18,11 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
-        lyj_takeOutBtn = findViewById<Button>(R.id.lyj_takeOut)
-        lyj_eatRightBtn = findViewById<Button>(R.id.lyj_eatRight)
+        lyj_goOrder = findViewById<LinearLayout>(R.id.lyj_goOrder)
         imgView = findViewById<ImageView>(R.id.imageView)
 
-        lyj_takeOutBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        lyj_eatRightBtn.setOnClickListener {
+
+        lyj_goOrder.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
