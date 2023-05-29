@@ -230,6 +230,7 @@ class MainActivity : AppCompatActivity() {
                 0 -> hotCof_Fragment()
                 1 -> iceCof_Fragment()
                 2 -> adeTea_Fragment()
+                3 -> drink_Fragment()
                 else -> iceCof_Fragment()
             }
         }

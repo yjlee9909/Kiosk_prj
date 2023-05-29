@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adeTea_Fragment">
+    tools:context=".drink_Fragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_marginBottom="15dp">
 
                     <LinearLayout
-                        android:id="@+id/lyj_lemonade"
+                        android:id="@+id/lyj_strawLatte"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -33,17 +33,17 @@
                         android:padding="5dp">
 
                         <ImageView
-                            android:id="@+id/lyj_lemonade_img"
+                            android:id="@+id/lyj_strawLatte_img"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/lemonade"
+                            android:background="@drawable/hot_cof"
                             android:padding="16dp" />
 
                         <TextView
-                            android:id="@+id/lyj_lemonade_text"
+                            android:id="@+id/lyj_strawLatte_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="레몬에이드"
+                            android:text="딸기라떼"
                             android:textColor="@color/black"
                             android:textSize="11dp"
                             android:layout_marginTop="10dp"
@@ -57,7 +57,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/lyj_lemonade_price"
+                                android:id="@+id/lyj_strawLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2500"
@@ -76,7 +76,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyj_bluelemonade"
+                        android:id="@+id/lyj_sweetPotLatte"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -89,17 +89,17 @@
                         android:padding="5dp">
 
                         <ImageView
-                            android:id="@+id/lyj_bluelemonade_img"
+                            android:id="@+id/lyj_sweetPotLatte_img"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/blue_lemonade"
+                            android:background="@drawable/latte"
                             android:padding="16dp" />
 
                         <TextView
-                            android:id="@+id/lyj_bluelemonade_text"
+                            android:id="@+id/lyj_sweetPotLatte_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="블루레몬에이드"
+                            android:text="고구마라떼"
                             android:textColor="@color/black"
                             android:textSize="11dp"
                             android:layout_marginTop="10dp"
@@ -113,7 +113,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/lyj_bluelemonade_price"
+                                android:id="@+id/lyj_sweetPotLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2500"
@@ -132,7 +132,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lyj_jamong"
+                        android:id="@+id/lyj_greenTeaLatte"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -143,17 +143,17 @@
                         android:padding="5dp">
 
                         <ImageView
-                            android:id="@+id/lyj_jamong_img"
+                            android:id="@+id/lyj_greenTeaLatte_img"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/ade"
+                            android:background="@drawable/tea"
                              />
 
                         <TextView
-                            android:id="@+id/lyj_jamong_text"
+                            android:id="@+id/lyj_greenTeaLatte_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="자몽에이드"
+                            android:text="녹차라떼"
                             android:textColor="@color/black"
                             android:textSize="11dp"
                             android:layout_marginTop="10dp"
@@ -167,7 +167,7 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/lyj_jamong_price"
+                                android:id="@+id/lyj_greenTeaLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2500"
@@ -193,7 +193,7 @@
                 >
 
                 <LinearLayout
-                    android:id="@+id/lyj_greengrape"
+                    android:id="@+id/lyj_choco"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -204,17 +204,17 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:id="@+id/lyj_greengrape_img"
+                        android:id="@+id/lyj_choco_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/green"
+                        android:background="@drawable/choco"
                         android:padding="16dp" />
 
                     <TextView
-                        android:id="@+id/lyj_greengrape_text"
+                        android:id="@+id/lyj_choco_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="청포도에이드"
+                        android:text="(아이스 / 핫) 초코"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:layout_marginTop="10dp"
@@ -229,7 +229,7 @@
                         >
 
                         <TextView
-                            android:id="@+id/lyj_greengrapec_price"
+                            android:id="@+id/lyj_choco_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -248,7 +248,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/lyj_greentea"
+                    android:id="@+id/lyj_grainLatte"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -261,17 +261,17 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:id="@+id/lyj_greentea_img"
+                        android:id="@+id/lyj_grainLatte_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/tea"
+                        android:background="@drawable/hot_cof"
                         android:padding="16dp" />
 
                     <TextView
-                        android:id="@+id/lyj_greentea_text"
+                        android:id="@+id/lyj_grainLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="녹차"
+                        android:text="곡물라떼"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -286,7 +286,7 @@
                         >
 
                         <TextView
-                            android:id="@+id/lyj_greentea_price"
+                            android:id="@+id/lyj_grainLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -305,7 +305,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/lyj_peachIceTea"
+                    android:id="@+id/lyj_yeonyuLatte"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -316,17 +316,17 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:id="@+id/lyj_peachIceTea_img"
+                        android:id="@+id/lyj_yeonyuLatte_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/ice_americano"
+                        android:background="@drawable/latte"
                         android:padding="16dp" />
 
                     <TextView
-                        android:id="@+id/lyj_peachIceTea_text"
+                        android:id="@+id/lyj_yeonyuLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="복숭아아이스티"
+                        android:text="연유라떼"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="11dp"
@@ -340,7 +340,7 @@
                         android:gravity="center">
 
                         <TextView
-                            android:id="@+id/lyj_peachIceTea_price"
+                            android:id="@+id/lyj_yeonyuLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2500"
@@ -358,179 +358,7 @@
                 </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                >
 
-                <LinearLayout
-                    android:id="@+id/lyj_yuzaTea"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:id="@+id/lyj_yuzaTea_img"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/lemonade"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:id="@+id/lyj_yuzaTea_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="유자차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="11dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:id="@+id/lyj_yuzaTea_price"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lyj_jamongtea"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:id="@+id/lyj_jamongtea_img"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/ade"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:id="@+id/lyj_jamongtea_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="자몽차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
-
-                        <TextView
-                            android:id="@+id/lyj_zamongtea_price"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lyj_lemonTea"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/menu_round_button"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:id="@+id/lyj_lemonTea_img"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/lemonade"
-                        android:padding="16dp" />
-
-                    <TextView
-                        android:id="@+id/lyj_lemonTea_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="레몬차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <TextView
-                            android:id="@+id/lyj_lemonTea_price"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2500"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textColor="#FF1F1F"
-                            android:textSize="14dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
 
 
         </LinearLayout>
