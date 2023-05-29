@@ -70,7 +70,7 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
         holder.lyj_optionHotIce.text = item.selectedHotIceOption
 
-
+        // 아이디가 디저트인경우 해당 옵션 리니어 보이지 않도록
         if (item.id.contains("dessert")) {
             holder.lyj_optionHotIceMenu.visibility = View.GONE
             holder.lyj_optionPlusMenu.visibility = View.GONE
@@ -120,9 +120,4 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         return totalCount
     }
 
-    // HOT / ICE 인 경우 옵션 안보이게
-    /*fun setIsHotIceTab(isHotIceTab: Boolean) {
-        this.isHotIceTab = isHotIceTab
-        notifyDataSetChanged()
-    }*/
 }

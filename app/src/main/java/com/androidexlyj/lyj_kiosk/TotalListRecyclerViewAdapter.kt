@@ -49,6 +49,7 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         holder.lyj_optionHotIceMenuText.text = item.selectedHotIceOption
 
 
+        // 아이디가 디저트인경우 해당 옵션 리니어 보이지 않도록
         if (item.id.contains("dessert")) {
             holder.lyj_totalRecyShotLinear.visibility = View.GONE
             holder.lyj_totalRecyHotIceLinear.visibility = View.GONE
