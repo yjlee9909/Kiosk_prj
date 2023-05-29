@@ -231,6 +231,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> iceCof_Fragment()
                 2 -> adeTea_Fragment()
                 3 -> drink_Fragment()
+                4 -> dessert_Fragment()
                 else -> iceCof_Fragment()
             }
         }

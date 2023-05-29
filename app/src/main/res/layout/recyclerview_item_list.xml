@@ -86,8 +86,9 @@
             </LinearLayout>
 
         </LinearLayout>
-        <!--                        옵션 추가시 추가될 목록-->
+
         <LinearLayout
+            android:id="@+id/lyj_totalRecyShotLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -142,6 +143,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/lyj_totalRecyHotIceLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

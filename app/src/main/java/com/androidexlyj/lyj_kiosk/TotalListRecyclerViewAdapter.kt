@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,6 +17,9 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         val lyj_optionPlusShotPriceList: TextView = itemView.findViewById(R.id.lyj_optionPlusShotPriceList)
         val lyj_cntList: TextView = itemView.findViewById(R.id.lyj_cntList)
         val lyj_optionHotIceMenuText: TextView = itemView.findViewById(R.id.lyj_optionHotIceMenuText)
+
+        val lyj_totalRecyShotLinear: LinearLayout = itemView.findViewById(R.id.lyj_totalRecyShotLinear)
+        val lyj_totalRecyHotIceLinear: LinearLayout = itemView.findViewById(R.id.lyj_totalRecyHotIceLinear)
 
     }
 
@@ -43,6 +47,16 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         holder.lyj_optionPlusShotPriceList.text = (item.optShotPrice.toInt()*item.count).toString()
 
         holder.lyj_optionHotIceMenuText.text = item.selectedHotIceOption
+
+
+        if (item.id.contains("dessert")) {
+            holder.lyj_totalRecyShotLinear.visibility = View.GONE
+            holder.lyj_totalRecyHotIceLinear.visibility = View.GONE
+
+        } else {
+            holder.lyj_totalRecyShotLinear.visibility = View.VISIBLE
+            holder.lyj_totalRecyHotIceLinear.visibility = View.VISIBLE
+        }
 
     }
 

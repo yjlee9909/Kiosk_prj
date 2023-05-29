@@ -6,7 +6,7 @@
     android:layout_marginRight="5dp"
     android:background="@drawable/dialog_round"
     android:minWidth="400dp"
-    android:minHeight="300dp"
+    android:minHeight="180dp"
     android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
@@ -212,13 +212,14 @@
         </RadioGroup>
     </LinearLayout>-->
     <LinearLayout
+        android:id="@+id/lyj_shotOptionMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/option_border_white"
         android:orientation="vertical"
         android:padding="10dp">
-        <!--        만약 메뉴가 티 종류라면 보여주기 그 외에는 안보이도록 설정하기 -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

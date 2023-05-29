@@ -26,6 +26,8 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         val lyj_optionHotIce: TextView = itemView.findViewById(R.id.lyj_optionHotIce)
 
         val lyj_optionHotIceMenu: LinearLayout = itemView.findViewById(R.id.lyj_optionHotIceMenu)
+        val lyj_onlyListMenu: LinearLayout = itemView.findViewById(R.id.lyj_onlyListMenu)
+        val lyj_optionPlusMenu: LinearLayout = itemView.findViewById(R.id.lyj_optionPlusMenu)
 
         init {
             // 삭제 버튼 클릭시 각 해당 리스트 삭제
@@ -68,12 +70,15 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
         holder.lyj_optionHotIce.text = item.selectedHotIceOption
 
-        /*// 커피 HOT / ICE 옵션 뷰 가시성 설정
-        if (isHotIceTab) {
+
+        if (item.id.contains("dessert")) {
             holder.lyj_optionHotIceMenu.visibility = View.GONE
+            holder.lyj_optionPlusMenu.visibility = View.GONE
+
         } else {
             holder.lyj_optionHotIceMenu.visibility = View.VISIBLE
-        }*/
+            holder.lyj_optionPlusMenu.visibility = View.VISIBLE
+        }
 
 
 
