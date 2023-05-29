@@ -68,7 +68,7 @@ class optionDialog(private val id: String, private val text: String, private val
         dialog?.setCancelable(true)
 
         /*Toast.makeText(context,id, Toast.LENGTH_SHORT).show()*/
-        Toast.makeText(context, price.toString(), Toast.LENGTH_SHORT).show()
+//        Toast.makeText(context, price.toString(), Toast.LENGTH_SHORT).show()
 
         // 상품명 넣기
         lyj_optionMenuName.text = text
@@ -179,7 +179,7 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
         lyj_optionCart.setOnClickListener {
-            Toast.makeText(context,lyj_plusOptShot, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context,lyj_plusOptShot, Toast.LENGTH_SHORT).show()
             val lyj_ItemName = lyj_optionMenuName.text.toString()
             val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
             val lyj_ItemCnt = "1".toInt()

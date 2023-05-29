@@ -37,7 +37,9 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.setCancelable(true)
 
-
+        // 다음 버튼 디자인 변경
+        lyj_takeNext.setBackgroundResource(R.drawable.stroke_btn)
+        lyj_takeNext.setTextColor(Color.parseColor("#006400"))
 
 
         lyj_eatRight.setOnClickListener {
@@ -53,7 +55,7 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
 
 
         lyj_takeNext.setOnClickListener {
-            Toast.makeText(context, totalPrice, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, totalPrice, Toast.LENGTH_SHORT).show()
             val dialog = payCardDialog(totalPrice.toString())
             dialog.show(parentFragmentManager, "CustomDialog")
             dismiss()
@@ -63,33 +65,42 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
     }
 
     private fun selectEatBtn(selectBtn: Button) {
+    /*    val isAnyTakeBtnSelected = lyj_takeOut.isSelected && lyj_eatRight.isSelected
+        lyj_takeNext.isEnabled = isAnyTakeBtnSelected*/
 
 
         if (selectBtn == lyj_takeOut) {
+            // 다음 버튼
             lyj_takeNext.setBackgroundColor(Color.parseColor("#006400"))
             lyj_takeNext.setTextColor(Color.parseColor("#FFFFFF"))
 
-
             lyj_takeOut.isSelected = true
             lyj_eatRight.isSelected = false
+            // 포장 버튼
             lyj_takeOut.setBackgroundColor(Color.parseColor("#006400"))
             lyj_takeOut.setTextColor(Color.parseColor("#FFFFFF"))
 
+            // 먹고가기 버튼
             lyj_eatRight.setBackgroundResource(R.drawable.stroke_btn)
             lyj_eatRight.setTextColor(Color.parseColor("#006400"))
         } else if (selectBtn == lyj_eatRight) {
+            // 다음 버튼
+            lyj_takeNext.setBackgroundColor(Color.parseColor("#006400"))
+            lyj_takeNext.setTextColor(Color.parseColor("#FFFFFF"))
+
             lyj_takeOut.isSelected = false
             lyj_eatRight.isSelected = true
+            // 포장 버튼
             lyj_eatRight.setBackgroundColor(Color.parseColor("#006400"))
             lyj_eatRight.setTextColor(Color.parseColor("#FFFFFF"))
 
+            // 먹고가기 버튼
             lyj_takeOut.setBackgroundResource(R.drawable.stroke_btn)
             lyj_takeOut.setTextColor(Color.parseColor("#006400"))
         }
 
 
-        val isAnyTakeBtnSelected = lyj_takeOut.isSelected || lyj_eatRight.isSelected
-        lyj_takeNext.isEnabled = isAnyTakeBtnSelected
+
 
     }
 
