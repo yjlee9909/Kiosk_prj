@@ -44,11 +44,11 @@ class adeTea_Fragment : Fragment() {
             view.findViewById(R.id.lyj_lemonade),
             view.findViewById(R.id.lyj_bluelemonade),
             view.findViewById(R.id.lyj_jamong),
-            view.findViewById(R.id.lyj_greengrape),
+            view.findViewById(R.id.lyj_greengrapeTea),
             view.findViewById(R.id.lyj_greentea),
             view.findViewById(R.id.lyj_peachIceTea),
             view.findViewById(R.id.lyj_yuzaTea),
-            view.findViewById(R.id.lyj_jamongtea),
+            view.findViewById(R.id.lyj_jamongTea),
             view.findViewById(R.id.lyj_lemonTea)
         )
 

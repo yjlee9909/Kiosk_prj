@@ -60,7 +60,7 @@
                             android:id="@+id/lyj_ice_ameri_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="1500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -117,7 +117,7 @@
                             android:id="@+id/lyj_ice_latte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3000"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -172,7 +172,7 @@
                             android:id="@+id/lyj_ice_Vanilla_latte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -231,7 +231,7 @@
                             android:id="@+id/lyj_ice_caramelMac_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -288,7 +288,7 @@
                             android:id="@+id/lyj_ice_cafeMocha_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -342,7 +342,7 @@
                             android:id="@+id/lyj_ice_cappuccino_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -403,7 +403,7 @@
                             android:id="@+id/lyj_ice_tiramisuLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3800"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -460,7 +460,7 @@
                             android:id="@+id/lyj_ice_coldbrew_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="2000"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -514,7 +514,7 @@
                             android:id="@+id/lyj_ice_coldbrewLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 

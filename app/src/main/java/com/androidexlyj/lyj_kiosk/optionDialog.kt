@@ -99,6 +99,14 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_shotOptionMenu.visibility = View.GONE
         }
 
+        // hot/ice 버튼을 2번째로 선택한 경우에도 lyj_optionCart 버튼 활성화되도록
+        lyj_optHot.setOnClickListener {
+            updateOptCartBtnState()
+        }
+        lyj_optIce.setOnClickListener {
+            updateOptCartBtnState()
+        }
+
         // 라디오버튼 하나만 선택가능하도록
         lyj_basic.setOnClickListener {
             lyj_basic.isChecked = true
@@ -196,6 +204,8 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
     private fun updateOptCartBtnState() {
+
+        // dessert인 경우 버튼 활성화
         if (id.contains("dessert")) {
             lyj_optionCart.isEnabled = true
             lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
@@ -204,14 +214,21 @@ class optionDialog(private val id: String, private val text: String, private val
         }
 
 
-        val isAnyRadBtnSelected =
-            lyj_basic.isChecked || lyj_light.isChecked || lyj_addShot.isChecked || lyj_addTwoShot.isChecked
-        lyj_optionCart.isEnabled = isAnyRadBtnSelected
+        // 라디오 버튼 선택 여부로 버튼 활성화
+        val isAnyHotIceSelected = listOf(lyj_optHot, lyj_optIce)
+            .any { it.isChecked }
+        val isAnyRadBtnSelected = listOf(lyj_basic, lyj_light, lyj_addShot, lyj_addTwoShot)
+            .any { it.isChecked }
 
-        if (isAnyRadBtnSelected) {
+        val lyj_isBothSelected = (isAnyRadBtnSelected && isAnyHotIceSelected)
+
+        lyj_optionCart.isEnabled = lyj_isBothSelected
+
+        if (lyj_isBothSelected) {
             // 라디오 버튼 선택된 경우 주문담기 버튼 활성화
             lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
             lyj_optionCart.setTextColor(Color.parseColor("#FFFFFF"))
+
         }  else {
             // 그게 아니라면 비활성화
             lyj_optionCart.setBackgroundResource(R.drawable.stroke_btn)

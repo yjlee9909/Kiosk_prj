@@ -60,7 +60,7 @@
                                 android:id="@+id/lyj_strawLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2500"
+                                android:text="3500"
                                 android:textColor="#FF1F1F"
                                 android:textSize="14dp" />
 
@@ -116,7 +116,7 @@
                                 android:id="@+id/lyj_sweetPotLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2500"
+                                android:text="3500"
                                 android:textColor="#FF1F1F"
                                 android:textSize="14dp" />
 
@@ -170,7 +170,7 @@
                                 android:id="@+id/lyj_greenTeaLatte_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2500"
+                                android:text="3500"
                                 android:textColor="#FF1F1F"
                                 android:textSize="14dp" />
 
@@ -232,7 +232,7 @@
                             android:id="@+id/lyj_choco_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -289,7 +289,7 @@
                             android:id="@+id/lyj_grainLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
@@ -343,7 +343,7 @@
                             android:id="@+id/lyj_yeonyuLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500"
+                            android:text="3500"
                             android:textColor="#FF1F1F"
                             android:textSize="14dp" />
 
