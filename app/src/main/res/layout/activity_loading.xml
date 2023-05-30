@@ -37,17 +37,41 @@
                 android:textColor="@color/white"
                 android:textSize="26dp"
                 android:text="기다리지 않고 간편하게"/>
-            <TextView
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="55dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="20dp"
+                    android:text="&quot;"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="35dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:text="키오스크에서\n주문하세요!"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="55dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:text="&quot;"/>
+            </LinearLayout>
 
-                android:textSize="35dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:layout_marginBottom="10dp"
-                android:text="키오스크에서\n주문하세요!"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
