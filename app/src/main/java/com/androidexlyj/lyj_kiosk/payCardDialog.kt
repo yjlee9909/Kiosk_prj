@@ -47,6 +47,8 @@ class payCardDialog(private val itemList: ArrayList<ItemData>, private val getTo
         }
 
         lyj_approveBtn.setOnClickListener {
+            // 결제 버튼 눌렀을때 "취소" 버튼 눌림 방지
+            lyj_cancelBtn.isEnabled = false
             val mainActivity = activity as MainActivity
             mainActivity.let {
                 Toast.makeText(context, "결제중입니다. 잠시만 기다려주세요.", Toast.LENGTH_SHORT).show()
