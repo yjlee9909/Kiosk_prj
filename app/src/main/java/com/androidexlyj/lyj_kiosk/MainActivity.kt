@@ -67,13 +67,30 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
-            val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(), lyj_totalCount.toString(),::updateTotalPrice)
-            dialog.show(this.supportFragmentManager, "CustomDialog")
-//            Toast.makeText(applicationContext, lyj_totalCount.toString(), Toast.LENGTH_SHORT).show()
+            if (lyj_itemList.isEmpty()) {
+                lyj_payBtn.isEnabled = true
+                Toast.makeText(applicationContext, "메뉴를 선택해 주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                lyj_payBtn.isEnabled = false
+                val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(), lyj_totalCount.toString(),::updateTotalPrice)
+                dialog.show(this.supportFragmentManager, "CustomDialog")
+            }
         }
+
         lyj_payImgBtn.setOnClickListener {
-            val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(),lyj_totalCount.toString(),::updateTotalPrice)
-            dialog.show(this.supportFragmentManager, "CustomDialog")
+            if (lyj_itemList.isEmpty()) {
+                lyj_payImgBtn.isEnabled = true
+                Toast.makeText(applicationContext, "메뉴를 선택해 주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                lyj_payImgBtn.isEnabled = false
+                val dialog = listDialog(
+                    lyj_itemList,
+                    lyj_totalPrice.text.toString(),
+                    lyj_totalCount.toString(),
+                    ::updateTotalPrice
+                )
+                dialog.show(this.supportFragmentManager, "CustomDialog")
+            }
         }
 
         // 초기화
@@ -81,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         viewPager2 = findViewById(R.id.lyj_viewPager2)
         val viewPager2Adapter = ViewPager2Adapter(this)
         viewPager2.adapter = viewPager2Adapter
-//        // 탭 추가
+        // 탭 추가
         val tabs = listOf(
             "커피(HOT)",
             "커피(ICE)",
@@ -90,20 +107,6 @@ class MainActivity : AppCompatActivity() {
             "디저트"
         )
 
-////        // ViewPager2 어댑터 작성
-//        viewPager2.adapter = object : FragmentStateAdapter(this) {
-//            // 프래그먼트 저장 배열
-//            var fragments = listOf<Fragment>()
-//            override fun getItemCount(): Int = fragments.size
-//            override fun createFragment(position: Int): Fragment {
-//                return when (position) {
-//                    0 -> CoffeeHotFragment()
-//                    1 -> CoffeeIceFragment()
-//                    else -> CoffeeIceFragment()
-//                }
-//                return fragments.get(position)
-//            }
-//        }
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
             // 리스트 목록을 가져와 탭에 보여주기
@@ -112,28 +115,6 @@ class MainActivity : AppCompatActivity() {
         // attach로 TabLayout, ViewPager 연결
 
 
-        /*// 탭 별로 HOT / ICE 옵션 안보이게
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                val position = tab?.position
-                if (position == 0 || position == 1) {
-                    isHotIceTab = (position == 0)
-                    lyj_adapter.setIsHotIceTab(isHotIceTab)
-                }
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                val position = tab?.position
-                if (position == 0 || position == 1) {
-                    // HOT / ICE 탭 선택 해제시 hot/ice 옵션 메뉴
-                    lyj_adapter.setIsHotIceTab(false)
-                }
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-        })*/
 
         // 초기화
         lyj_itemList = ArrayList()
@@ -156,6 +137,8 @@ class MainActivity : AppCompatActivity() {
         val totalCount = lyj_adapter.getTotalCount()
         lyj_totalPrice.text = totalPrice.toString()
         lyj_totalCount = totalCount
+
+
     }
 
     // 리스트 전체 삭제
