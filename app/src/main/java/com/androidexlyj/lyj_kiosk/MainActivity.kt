@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -75,6 +76,12 @@ class MainActivity : AppCompatActivity() {
                 lyj_payBtn.isEnabled = false
                 val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(), lyj_totalCount.toString(),::updateTotalPrice)
                 dialog.show(this.supportFragmentManager, "CustomDialog")
+            }
+            // lyj_itemList 확인
+            for (itemData in lyj_itemList) {
+                // itemData에 대한 처리
+                // 예: Log 출력
+                Log.d("listcheck", "Item: ${itemData.name}, Price: ${itemData.price}")
             }
         }
 

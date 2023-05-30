@@ -65,7 +65,7 @@ class optionDialog(private val id: String, private val text: String, private val
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog?.setCancelable(true)
+        dialog?.setCancelable(false)
 
         /*Toast.makeText(context,id, Toast.LENGTH_SHORT).show()*/
 //        Toast.makeText(context, price.toString(), Toast.LENGTH_SHORT).show()
@@ -173,6 +173,7 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
         lyj_optionDel.setOnClickListener {
+
             dismiss()
         }
 

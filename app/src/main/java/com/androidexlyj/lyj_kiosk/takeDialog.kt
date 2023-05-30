@@ -11,7 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class takeDialog(private val totalPrice: String) : DialogFragment() {
+class takeDialog(private val itemList: ArrayList<ItemData>, private val totalPrice: String) : DialogFragment() {
     //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
     private lateinit var lyj_eatRight: Button
@@ -35,7 +35,7 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog?.setCancelable(true)
+        dialog?.setCancelable(false)
 
         // 다음 버튼 디자인 변경
         lyj_takeNext.setBackgroundResource(R.drawable.stroke_btn)
@@ -50,6 +50,11 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
             selectEatBtn(lyj_takeOut)
         }
         lyj_takeCancel.setOnClickListener {
+            // 리스트가 비어있지 않다면 lyj_payBtn, lyj_payImgBtn 다시 클릭 가능
+            if (itemList.isNotEmpty()) {
+                (activity as? MainActivity)?.lyj_payBtn?.isEnabled = true
+                (activity as? MainActivity)?.lyj_payImgBtn?.isEnabled = true
+            }
             dismiss()
         }
 
@@ -61,7 +66,7 @@ class takeDialog(private val totalPrice: String) : DialogFragment() {
                 Toast.makeText(context, "장소를 선택해 주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 lyj_takeNext.isEnabled = false
-                val dialog = payCardDialog(totalPrice.toString())
+                val dialog = payCardDialog(itemList,totalPrice.toString())
                 dialog.show(parentFragmentManager, "CustomDialog")
                 dismiss()
             }

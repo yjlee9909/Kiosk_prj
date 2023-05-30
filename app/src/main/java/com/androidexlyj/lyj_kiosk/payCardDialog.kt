@@ -1,6 +1,5 @@
 package com.androidexlyj.lyj_kiosk
 
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -12,7 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class payCardDialog(private val getTotalPrice: String) : DialogFragment() {
+class payCardDialog(private val itemList: ArrayList<ItemData>, private val getTotalPrice: String) : DialogFragment() {
 //    private var _binding: DialogLayoutBinding? = null
 //    private val binding get() = _binding!!
 
@@ -33,12 +32,17 @@ class payCardDialog(private val getTotalPrice: String) : DialogFragment() {
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog?.setCancelable(true)
+        dialog?.setCancelable(false)
 
         lyj_totalPriceDialog.text = getTotalPrice
 
 
         lyj_cancelBtn.setOnClickListener {
+            // 리스트가 비어있지 않다면 lyj_payBtn, lyj_payImgBtn 다시 클릭 가능
+            if (itemList.isNotEmpty()) {
+                (activity as? MainActivity)?.lyj_payBtn?.isEnabled = true
+                (activity as? MainActivity)?.lyj_payImgBtn?.isEnabled = true
+            }
             dismiss()
         }
 

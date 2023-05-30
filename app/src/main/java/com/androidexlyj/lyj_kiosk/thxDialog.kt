@@ -31,7 +31,9 @@ class thxDialog() : DialogFragment() {
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog?.setCancelable(true)
+//        dialog?.setCancelable(true)
+        // 다이얼로그 바깥 화면을 눌러도 종료되지 않도록 설정
+        dialog?.setCancelable(false)
 
         val countdownHandler = Handler(Looper.getMainLooper())
         // 1초마다 실행 (총 5초에서 1초씩 감소시키기)
