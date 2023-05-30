@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var countDownTimer: CountDownTimer
     private var isCountDownRunning = false
-    private val COUNTDOWN_TIME = 300000 // 120초를 밀리초로 표현
+    private val COUNTDOWN_TIME = 300000 // 300초를 밀리초로 표현 300000
     private val COUNTDOWN_INTERVAL = 1000 // 카운트다운 간격을 1초로 설정
     private var initialCountDownTime : Long = COUNTDOWN_TIME.toLong()
     private var isPaused = false
@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "주문이 전체 삭제되었습니다.", Toast.LENGTH_SHORT).show()
         }
         lyj_payBtn.setOnClickListener {
+            // 리스트가 비어있는 경우 결제하기 버튼 비활성화
             if (lyj_itemList.isEmpty()) {
                 lyj_payBtn.isEnabled = true
                 Toast.makeText(applicationContext, "메뉴를 선택해 주세요.", Toast.LENGTH_SHORT).show()
@@ -78,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         lyj_payImgBtn.setOnClickListener {
+            // 리스트가 비어있는 경우 결제하기 버튼 비활성화
             if (lyj_itemList.isEmpty()) {
                 lyj_payImgBtn.isEnabled = true
                 Toast.makeText(applicationContext, "메뉴를 선택해 주세요.", Toast.LENGTH_SHORT).show()
@@ -168,8 +170,12 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         if (!isPaused) {
             startCountDown()
-
         }
+    }
+    override fun onPause() {
+        super.onPause()
+        isPaused = true
+        stopCountDown()
     }
     override fun onDestroy() {
         super.onDestroy()
