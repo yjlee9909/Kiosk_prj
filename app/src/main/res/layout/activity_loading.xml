@@ -8,37 +8,43 @@
     android:background="#F0F0F0"
     android:orientation="vertical"
     tools:context=".LoadingActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
         android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
             android:src="@drawable/logo" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#006400"
+            android:background="@color/main_green"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingTop="30dp"
             android:paddingBottom="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="기다리지 않고 간편하게"
                 android:textColor="@color/white"
                 android:textSize="26dp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -48,6 +54,7 @@
                     android:textColor="@color/white"
                     android:textSize="55dp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -58,6 +65,7 @@
                     android:textColor="@color/white"
                     android:textSize="35dp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -68,18 +76,21 @@
                     android:textSize="55dp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/option_border_green"
                 android:padding="20dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="화면을 터치해 주세요"
-                    android:textColor="#FD0000"
+                    android:textColor="@color/text_color"
                     android:textSize="22dp"
                     android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -88,6 +99,4 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>
