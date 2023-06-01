@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DAD9D9">
+        android:background="@color/menu_background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,175 +21,172 @@
                 android:layout_height="130dp"
                 android:layout_marginBottom="15dp">
 
-                    <LinearLayout
-                        android:id="@+id/lyj_dessert_appleWaffle"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
+                <LinearLayout
+                    android:id="@+id/lyj_dessert_appleWaffle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                        <ImageView
-                            android:id="@+id/lyj_dessert_appleWaffle_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/waffle"
-                            android:padding="16dp" />
+                    <ImageView
+                        android:id="@+id/lyj_dessert_appleWaffle_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/waffle"
+                        android:padding="16dp" />
 
-                        <TextView
-                            android:id="@+id/lyj_dessert_appleWaffle_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="사과생크림와플"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_dessert_appleWaffle_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="3500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/lyj_dessert_appleWaffle_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="사과생크림와플"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
-                        android:id="@+id/lyj_dessert_cheeseCake"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/lyj_dessert_cheeseCake_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/cheese_cake"
-                            android:padding="16dp" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
 
                         <TextView
-                            android:id="@+id/lyj_dessert_cheeseCake_text"
-                            android:layout_width="match_parent"
+                            android:id="@+id/lyj_dessert_appleWaffle_price"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="치즈케이크"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
+                            android:text="3500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_dessert_cheeseCake_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="4500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
-
-
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
                     </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyj_dessert_cheeseCake"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/lyj_dessert_cheeseCake_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cheese_cake"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:id="@+id/lyj_dessert_cheeseCake_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="치즈케이크"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
-                        android:id="@+id/lyj_dessert_chocoCake"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/lyj_dessert_chocoCake_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/choco_cake"
-                             />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
 
                         <TextView
-                            android:id="@+id/lyj_dessert_chocoCake_text"
-                            android:layout_width="match_parent"
+                            android:id="@+id/lyj_dessert_cheeseCake_price"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="초코케이크"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
+                            android:text="4500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_dessert_chocoCake_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="4500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
                     </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyj_dessert_chocoCake"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/lyj_dessert_chocoCake_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/choco_cake" />
+
+                    <TextView
+                        android:id="@+id/lyj_dessert_chocoCake_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="초코케이크"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/lyj_dessert_chocoCake_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
-                >
+                android:layout_marginBottom="15dp">
 
                 <LinearLayout
                     android:id="@+id/lyj_dessert_tiramisuCake"
@@ -213,50 +210,47 @@
                         android:id="@+id/lyj_dessert_tiramisuCake_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="티라미수케이크"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="티라미수케이크"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_dessert_tiramisuCake_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyj_dessert_chocoCookie"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -270,37 +264,34 @@
                         android:id="@+id/lyj_dessert_chocoCookie_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="초콜릿칩쿠키"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="초콜릿칩쿠키"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_dessert_chocoCookie_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -325,12 +316,12 @@
                         android:id="@+id/lyj_dessert_whiteCookie_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="화이트마카다미아쿠키"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="화이트마카다미아쿠키"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -343,22 +334,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
                 </LinearLayout>
-
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
