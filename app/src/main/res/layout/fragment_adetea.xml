@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DAD9D9">
+        android:background="@color/menu_background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,176 +21,173 @@
                 android:layout_height="130dp"
                 android:layout_marginBottom="15dp">
 
-                    <LinearLayout
-                        android:id="@+id/lyj_lemonade"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
+                <LinearLayout
+                    android:id="@+id/lyj_lemonade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                        <ImageView
-                            android:id="@+id/lyj_lemonade_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/lemonade"
-                            android:padding="16dp" />
+                    <ImageView
+                        android:id="@+id/lyj_lemonade_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/lemonade"
+                        android:padding="16dp" />
 
-                        <TextView
-                            android:id="@+id/lyj_lemonade_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="레몬에이드"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_lemonade_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="3500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/lyj_lemonade_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="레몬에이드"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
-                        android:id="@+id/lyj_bluelemonade"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/lyj_bluelemonade_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/blue_lemonade"
-                            android:padding="16dp" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
 
                         <TextView
-                            android:id="@+id/lyj_bluelemonade_text"
-                            android:layout_width="match_parent"
+                            android:id="@+id/lyj_lemonade_price"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="블루레몬에이드"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
+                            android:text="3500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_bluelemonade_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="3500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
-
-
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
                     </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyj_bluelemonade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/lyj_bluelemonade_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/blue_lemonade"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:id="@+id/lyj_bluelemonade_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="블루레몬에이드"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
-                        android:id="@+id/lyj_jamong"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/menu_round_button"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/lyj_jamong_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/ade"
-                             />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
 
                         <TextView
-                            android:id="@+id/lyj_jamong_text"
-                            android:layout_width="match_parent"
+                            android:id="@+id/lyj_bluelemonade_price"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="자몽에이드"
-                            android:textColor="@color/black"
-                            android:textSize="11dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:textAlignment="center"
-                            android:textStyle="bold" />
+                            android:text="3500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
-
-                            <TextView
-                                android:id="@+id/lyj_jamong_price"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="3500"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:id="@+id/lyj_jamong_won"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="원"
-                                android:textColor="#FF1F1F"
-                                android:textSize="14dp" />
-                        </LinearLayout>
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
                     </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyj_jamong"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/menu_round_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/lyj_jamong_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ade" />
+
+                    <TextView
+                        android:id="@+id/lyj_jamong_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="자몽에이드"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/lyj_jamong_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3500"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
-                >
+                android:layout_marginBottom="15dp">
 
                 <LinearLayout
                     android:id="@+id/lyj_greengrapeTea"
@@ -214,33 +211,32 @@
                         android:id="@+id/lyj_greengrapeTea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="청포도에이드"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="청포도에이드"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_greengrapeTea_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -251,13 +247,13 @@
                     android:id="@+id/lyj_greentea"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -271,33 +267,32 @@
                         android:id="@+id/lyj_greentea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="녹차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="녹차"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_greentea_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3000"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -326,12 +321,12 @@
                         android:id="@+id/lyj_peachIceTea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="복숭아아이스티"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="복숭아아이스티"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -344,24 +339,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="3000"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                >
+                android:layout_height="130dp">
 
                 <LinearLayout
                     android:id="@+id/lyj_yuzaTea"
@@ -385,33 +380,32 @@
                         android:id="@+id/lyj_yuzaTea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="유자차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="유자차"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_yuzaTea_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -422,13 +416,13 @@
                     android:id="@+id/lyj_jamongTea"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -442,33 +436,32 @@
                         android:id="@+id/lyj_jamongTea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="자몽차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="자몽차"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_jamongTea_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
 
@@ -497,12 +490,12 @@
                         android:id="@+id/lyj_lemonTea_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="레몬차"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="레몬차"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -515,24 +508,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
