@@ -74,7 +74,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "메뉴를 선택해 주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 lyj_payBtn.isEnabled = false
-                val dialog = listDialog(lyj_itemList,lyj_totalPrice.text.toString(), lyj_totalCount.toString(),::updateTotalPrice)
+                val dialog = listDialog(
+                    lyj_itemList,
+                    lyj_totalPrice.text.toString(),
+                    lyj_totalCount.toString()
+                )
                 dialog.show(this.supportFragmentManager, "CustomDialog")
             }
             // lyj_itemList 확인
@@ -95,8 +99,7 @@ class MainActivity : AppCompatActivity() {
                 val dialog = listDialog(
                     lyj_itemList,
                     lyj_totalPrice.text.toString(),
-                    lyj_totalCount.toString(),
-                    ::updateTotalPrice
+                    lyj_totalCount.toString()
                 )
                 dialog.show(this.supportFragmentManager, "CustomDialog")
             }
