@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoadingActivity"
+            android:name=".HomeActivity"
             android:exported="true" >
         </activity>
         <activity

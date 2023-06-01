@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         lyj_payBtn = findViewById<LinearLayout>(R.id.lyj_payBtn)
         lyj_payImgBtn = findViewById<ImageButton>(R.id.lyj_payImgBtn)
         lyj_goHome.setOnClickListener {
-            val intent = Intent(this, LoadingActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
         lyj_delAllBtn.setOnClickListener {
@@ -211,7 +211,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 clearItemListAll()
-                val intent = Intent(this@MainActivity, LoadingActivity::class.java)
+                val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(applicationContext, "주문 시간이 만료되었습니다.", Toast.LENGTH_SHORT).show()
             }

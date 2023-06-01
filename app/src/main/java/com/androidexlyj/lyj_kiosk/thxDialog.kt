@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.*
-import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
 class thxDialog() : DialogFragment() {
@@ -46,7 +44,7 @@ class thxDialog() : DialogFragment() {
                 } else {
                     // 0초
                     countdownHandler.removeCallbacks(this)
-                    val intent = Intent(context, LoadingActivity::class.java)
+                    val intent = Intent(context, HomeActivity::class.java)
                     startActivity(intent)
                     dismiss()
                 }
