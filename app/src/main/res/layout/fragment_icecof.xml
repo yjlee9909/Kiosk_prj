@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DAD9D9">
+        android:background="@color/menu_background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,12 +43,12 @@
                         android:id="@+id/lyj_ice_ameri_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 아메리카노"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 아메리카노"
                         android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -61,32 +61,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
-                            android:id="@+id/lyj_ice_ameri_won"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyj_ice_latte"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -100,12 +97,12 @@
                         android:id="@+id/lyj_ice_latte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 카페라떼"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 카페라떼"
                         android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -118,19 +115,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3000"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
-                            android:id="@+id/lyj_ice_latte_won"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -148,19 +142,18 @@
                         android:id="@+id/lyj_ice_Vanilla_latte_img"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/ice_americano"
-                        />
+                        android:background="@drawable/ice_americano" />
 
                     <TextView
                         android:id="@+id/lyj_ice_Vanilla_latte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 바닐라라떼"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 바닐라라떼"
                         android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -173,24 +166,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
-                            android:id="@+id/lyj_ice_Vanilla_latte_won"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="15dp"
-                >
+                android:layout_marginBottom="15dp">
+
                 <LinearLayout
                     android:id="@+id/lyj_ice_caramelMac"
                     android:layout_width="0dp"
@@ -213,50 +206,47 @@
                         android:id="@+id/lyj_ice_caramelMac_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 카라멜마끼아또"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 카라멜마끼아또"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_ice_caramelMac_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyj_ice_cafeMocha"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -270,37 +260,34 @@
                         android:id="@+id/lyj_ice_cafeMocha_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 카페모카"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 카페모카"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_ice_cafeMocha_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -325,12 +312,12 @@
                         android:id="@+id/lyj_ice_cappuccino_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 카푸치노"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 카푸치노"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -343,25 +330,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                >
+                android:layout_height="130dp">
 
                 <LinearLayout
                     android:id="@+id/lyj_ice_tiramisuLatte"
@@ -385,50 +369,47 @@
                         android:id="@+id/lyj_ice_tiramisuLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 티라미수라떼"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 티라미수라떼"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_ice_tiramisuLatte_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3800"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyj_ice_coldbrew"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/menu_round_button"
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:padding="5dp">
 
                     <ImageView
@@ -442,37 +423,34 @@
                         android:id="@+id/lyj_ice_coldbrew_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 콜드브루"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 콜드브루"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/lyj_ice_coldbrew_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2000"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -497,12 +475,12 @@
                         android:id="@+id/lyj_ice_coldbrewLatte_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="(ICE) 콜드브루라떼"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textSize="11dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
+                        android:text="(ICE) 콜드브루라떼"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -515,25 +493,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3500"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
-                            android:textColor="#FF1F1F"
+                            android:textColor="@color/text_color"
                             android:textSize="14dp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-
 </FrameLayout>
