@@ -11,14 +11,10 @@ import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 
 class thxDialog() : DialogFragment() {
-//    private var _binding: DialogLayoutBinding? = null
-//    private val binding get() = _binding!!
     private var countTime = 5
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.dialog_thx, container, false)
         val lyj_countTime = view.findViewById<TextView>(R.id.lyj_countTime)
@@ -29,37 +25,28 @@ class thxDialog() : DialogFragment() {
         params.height = WindowManager.LayoutParams.MATCH_PARENT
         dialog?.window?.attributes = params
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-//        dialog?.setCancelable(true)
         // 다이얼로그 바깥 화면을 눌러도 종료되지 않도록 설정
         dialog?.setCancelable(false)
 
         val countdownHandler = Handler(Looper.getMainLooper())
-        // 1초마다 실행 (총 5초에서 1초씩 감소시키기)
+        // 5초에서 1초씩 감소시키기
         val countdownRunnable = object : Runnable {
             override fun run() {
                 if (countTime > 0) {
                     lyj_countTime.text = countTime.toString()
                     countTime--
-                    countdownHandler.postDelayed(this, 1000)
+                    countdownHandler.postDelayed(this, 1000)    // 1초 후에 다시 run() 실행
                 } else {
                     // 0초
-                    countdownHandler.removeCallbacks(this)
+                    countdownHandler.removeCallbacks(this)  // countdownRunnable 제거
                     val intent = Intent(context, HomeActivity::class.java)
                     startActivity(intent)
                     dismiss()
                 }
             }
         }
-        countdownHandler.postDelayed(countdownRunnable,1000)
-
-
-
+        // 카운트 다운 실행
+        countdownHandler.postDelayed(countdownRunnable, 1000)
         return view
     }
-    /*override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }*/
-
-
 }
