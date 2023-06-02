@@ -8,8 +8,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val updateTotalPrice: () -> Unit) :
+class RecyclerViewAdapter(
+    private val itemList: ArrayList<ItemData>,
+    private val updateTotalPrice: () -> Unit
+) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -37,19 +41,15 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
                     // MainActivity 접근
                     (itemView.context as MainActivity).lyj_itemList.removeAt(position)
                     (itemView.context as MainActivity).lyj_adapter.notifyItemRemoved(position)
-
                     (itemView.context as MainActivity).updateTotalPrice()
                 }
             }
-
-
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item, parent, false)
-
         return ViewHolder(itemView)
     }
 
@@ -57,17 +57,18 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
         return itemList.size
     }
 
+    // 각 아이템 데이터를 뷰 홀더에 바인딩하여 리사이클러뷰에 표시
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 아이템 데이터 가져오기
         val item = itemList[position]
 
         // 뷰홀더에 데이터 설정
-         holder.nameTextView.text = item.name
+        holder.nameTextView.text = item.name
         holder.priceTextView.text = (item.price.toInt() * item.count).toString()
         holder.lyj_cnt.text = item.count.toString()
 
-        holder.lyj_optionPlusShot.text = item.optShotName.toString()
-        holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+        holder.lyj_optionPlusShot.text = item.optShotName
+        holder.lyj_optionPlusShotPrice.text = (item.optShotPrice * item.count).toString()
         holder.lyj_optionHotIce.text = item.selectedHotIceOption
 
         // 아이디가 디저트인경우 해당 옵션 리니어 보이지 않도록
@@ -80,15 +81,12 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
             holder.lyj_optionPlusMenu.visibility = View.VISIBLE
         }
 
-
-
-
         holder.lyj_minusBtn.setOnClickListener {
             if (item.count > 1) {
                 item.count--
                 holder.lyj_cnt.text = item.count.toString()
                 holder.priceTextView.text = (item.price.toInt() * item.count).toString()
-                holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+                holder.lyj_optionPlusShotPrice.text = (item.optShotPrice * item.count).toString()
                 updateTotalPrice()
             }
         }
@@ -97,21 +95,21 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemData>, private val
             item.count++
             holder.lyj_cnt.text = item.count.toString()
             holder.priceTextView.text = (item.price.toInt() * item.count).toString()
-            holder.lyj_optionPlusShotPrice.text = (item.optShotPrice.toInt()*item.count).toString()
+            holder.lyj_optionPlusShotPrice.text = (item.optShotPrice * item.count).toString()
             updateTotalPrice()
         }
     }
 
 
-
     fun getTotalPrice(): Int {
         var totalPrice = 0
-        for(item in itemList) {
-            totalPrice += item.price.toInt()*item.count
-            totalPrice += item.optShotPrice.toInt()*item.count
+        for (item in itemList) {
+            totalPrice += item.price.toInt() * item.count
+            totalPrice += item.optShotPrice * item.count
         }
         return totalPrice
     }
+
     fun getTotalCount(): Int {
         var totalCount = 0
         for (item in itemList) {
