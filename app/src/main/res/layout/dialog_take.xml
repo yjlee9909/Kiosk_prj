@@ -25,73 +25,71 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="장소를 선택해주세요"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:textAlignment="center"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="3"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_weight="3">
+
         <Button
             android:id="@+id/lyj_eatRight"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="먹고가기"
+            android:layout_weight="1"
             android:background="@drawable/stroke_btn"
-            android:textColor="#006400"
+            android:text="먹고가기"
+            android:textColor="@color/main_green"
             android:textSize="23dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/lyj_takeOut"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="포장하기"
             android:layout_marginLeft="15dp"
+            android:layout_weight="1"
             android:background="@drawable/stroke_btn"
-            android:textColor="#006400"
+            android:text="포장하기"
+            android:textColor="@color/main_green"
             android:textSize="23dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/lyj_takeCancel"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:layout_weight="1"
             android:background="@drawable/stroke_btn"
             android:text="취소"
-            android:textColor="#006400"
+            android:textColor="@color/main_green"
             android:textSize="16dp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/lyj_takeNext"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="#006400"
+            android:layout_weight="1"
+            android:background="@color/main_green"
             android:text="다음"
             android:textColor="@color/white"
             android:textSize="16dp"
             android:textStyle="bold" />
-
-
     </LinearLayout>
 </LinearLayout>
 

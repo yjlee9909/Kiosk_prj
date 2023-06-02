@@ -65,7 +65,7 @@ class listDialog(
             dismiss()
         }
         lyj_listNext.setOnClickListener {
-            val dialog = takeDialog(itemList, totalPrice)
+            val dialog = takeDialog(totalPrice)
             dialog.show(parentFragmentManager, "CustomDialog")
             dismiss()
         }
