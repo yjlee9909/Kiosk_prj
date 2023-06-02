@@ -35,6 +35,7 @@ class listDialog(
         lyj_listTotalPrice = view.findViewById(R.id.lyj_listTotalPrice)
         lyj_listTotalCount = view.findViewById(R.id.lyj_listTotalCount)
 
+        // 다른 형태의 리사이클러뷰
         lyj_recyclerViewItemResult = view.findViewById(R.id.lyj_recyclerViewItemResult)
         lyj_adapter = TotalListRecyclerViewAdapter(itemList)
 

@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+// 전체 총 주문 목록 보여주는 코드
 class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
     RecyclerView.Adapter<TotalListRecyclerViewAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -17,10 +18,8 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         val lyj_optionPlusShotPriceList: TextView = itemView.findViewById(R.id.lyj_optionPlusShotPriceList)
         val lyj_cntList: TextView = itemView.findViewById(R.id.lyj_cntList)
         val lyj_optionHotIceMenuText: TextView = itemView.findViewById(R.id.lyj_optionHotIceMenuText)
-
         val lyj_totalRecyShotLinear: LinearLayout = itemView.findViewById(R.id.lyj_totalRecyShotLinear)
         val lyj_totalRecyHotIceLinear: LinearLayout = itemView.findViewById(R.id.lyj_totalRecyHotIceLinear)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,7 +27,6 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
             .inflate(R.layout.recyclerview_item_list, parent, false)
         return ViewHolder(itemView)
     }
-
 
     override fun getItemCount(): Int {
         return itemList.size
@@ -42,12 +40,9 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
         holder.lyj_recyMenuNameList.text = item.name
         holder.lyj_recyMenuPriceList.text = (item.price.toInt() * item.count).toString()
         holder.lyj_cntList.text = item.count.toString()
-
-        holder.lyj_optionPlusShotList.text = item.optShotName.toString()
-        holder.lyj_optionPlusShotPriceList.text = (item.optShotPrice.toInt()*item.count).toString()
-
+        holder.lyj_optionPlusShotList.text = item.optShotName
+        holder.lyj_optionPlusShotPriceList.text = (item.optShotPrice * item.count).toString()
         holder.lyj_optionHotIceMenuText.text = item.selectedHotIceOption
-
 
         // 아이디가 디저트인경우 해당 옵션 리니어 보이지 않도록
         if (item.id.contains("dessert")) {
@@ -58,24 +53,5 @@ class TotalListRecyclerViewAdapter (private val itemList: ArrayList<ItemData>) :
             holder.lyj_totalRecyShotLinear.visibility = View.VISIBLE
             holder.lyj_totalRecyHotIceLinear.visibility = View.VISIBLE
         }
-
-    }
-
-
-
-    fun getTotalPrice(): Int {
-        var totalPrice = 0
-        for(item in itemList) {
-            totalPrice += item.price.toInt()*item.count
-            totalPrice += item.optShotPrice.toInt()*item.count
-        }
-        return totalPrice
-    }
-    fun getTotalCount(): Int {
-        var totalCount = 0
-        for (item in itemList) {
-            totalCount += item.count
-        }
-        return totalCount
     }
 }
