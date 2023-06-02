@@ -14,9 +14,8 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
-            // 처음만 실행
+            // 처음만 한번 실행
             finish()
-
         }, 2000) // 시간 2초 이후 실행
     }
 }
