@@ -14,10 +14,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class optionDialog(private val id: String, private val text: String, private val price: Int, private val imageDrawable: Drawable) :
-    DialogFragment() {
-//    private var _binding: DialogLayoutBinding? = null
-//    private val binding get() = _binding!!
+class optionDialog(
+    private val id: String,
+    private val text: String,
+    private val price: Int,
+    private val imageDrawable: Drawable
+) : DialogFragment() {
 
     // 클래스의 멤버 변수로 선언하여 클래스 전체에서 참조 가능
     private lateinit var lyj_basic: RadioButton
@@ -31,9 +33,7 @@ class optionDialog(private val id: String, private val text: String, private val
 
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.dialog_option_menu, container, false)
         val lyj_optionMenuName = view.findViewById<TextView>(R.id.lyj_optionMenuName)
@@ -43,16 +43,12 @@ class optionDialog(private val id: String, private val text: String, private val
         val lyj_optionDel = view.findViewById<Button>(R.id.lyj_optionDel)
         val lyj_optionMenuImg = view.findViewById<ImageView>(R.id.lyj_optionMenuImg)
 
-
-
         lyj_optHot = view.findViewById(R.id.lyj_optHot)
         lyj_optIce = view.findViewById(R.id.lyj_optIce)
         lyj_optionCart = view.findViewById(R.id.lyj_optionCart)
 
         var lyj_plusOptShot = ""
         var lyj_plusOptShotPrice = 0
-
-        val lyj_shotRadio = view.findViewById<RadioGroup>(R.id.lyj_shotRadio)
 
         lyj_basic = view.findViewById(R.id.lyj_basic)
         lyj_light = view.findViewById(R.id.lyj_light)
@@ -67,22 +63,12 @@ class optionDialog(private val id: String, private val text: String, private val
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.setCancelable(false)
 
-        /*Toast.makeText(context,id, Toast.LENGTH_SHORT).show()*/
-//        Toast.makeText(context, price.toString(), Toast.LENGTH_SHORT).show()
-
-        // 상품명 넣기
+        // 받아온 상품명 넣기
         lyj_optionMenuName.text = text
         lyj_optionMenuPrice.text = price.toString()
         lyj_optionMenuImg.background = imageDrawable
 
-
-
-        // 탭별로 HOT / ICE 보여주기
-        /*if (id.contains("hot")||id.contains("ice")) {
-            lyj_optHotOrIce.visibility = View.GONE
-        } else {
-            lyj_optHotOrIce.visibility = View.VISIBLE
-        }*/
+        // id가 "hot"을 포함한 경우 선택 옵션은 "HOT'으로 미리 선택
         if (id.contains("hot")) {
             lyj_optHot.isEnabled = false
             lyj_optIce.isEnabled = false
@@ -99,7 +85,7 @@ class optionDialog(private val id: String, private val text: String, private val
             lyj_shotOptionMenu.visibility = View.GONE
         }
 
-        // hot/ice 버튼을 2번째로 선택한 경우에도 lyj_optionCart 버튼 활성화되도록
+        // hot/ice 버튼을 "농도" 다음으로 2번째로 선택한 경우에도 lyj_optionCart 버튼 활성화 되도록
         lyj_optHot.setOnClickListener {
             updateOptCartBtnState()
         }
@@ -120,7 +106,6 @@ class optionDialog(private val id: String, private val text: String, private val
             // 해당 text 정보 뽑아서 전달하기
             lyj_plusOptShot = lyj_optShotName.text.toString()
             lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
-
             updateOptCartBtnState()
         }
         lyj_light.setOnClickListener {
@@ -135,7 +120,6 @@ class optionDialog(private val id: String, private val text: String, private val
             // 해당 text 정보 뽑아서 전달하기
             lyj_plusOptShot = lyj_optShotName.text.toString()
             lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
-
             updateOptCartBtnState()
         }
         lyj_addShot.setOnClickListener {
@@ -164,78 +148,71 @@ class optionDialog(private val id: String, private val text: String, private val
             // 해당 text 정보 뽑아서 전달하기
             lyj_plusOptShot = lyj_optShotName.text.toString()
             lyj_plusOptShotPrice = lyj_optShotPrice.text.toString().toInt()
-
             updateOptCartBtnState()
         }
 
         updateOptCartBtnState()
 
-
-
         lyj_optionDel.setOnClickListener {
-
             dismiss()
         }
 
-
-
         lyj_optionCart.setOnClickListener {
-//            Toast.makeText(context,lyj_plusOptShot, Toast.LENGTH_SHORT).show()
             val lyj_ItemName = lyj_optionMenuName.text.toString()
             val lyj_ItemPriceText = lyj_optionMenuPrice.text.toString()
             val lyj_ItemCnt = "1".toInt()
             val selectedHotIceOption: String
 
-            // 리사이클러뷰로 옵션 문자열 넘기기
+            // 리사이클러뷰로 옵션 선택한 문자열 넘기기
             selectedHotIceOption = if (lyj_optHot.isChecked) "뜨거운 (HOT)"
             else if (lyj_optIce.isChecked) "차가운 (ICE)" else ""
 
-
-
             // ItemData에 값 전달
-            val lyj_itemData = ItemData(id, lyj_ItemName, lyj_ItemPriceText, lyj_ItemCnt, selectedHotIceOption, lyj_plusOptShot, lyj_plusOptShotPrice)
+            val lyj_itemData = ItemData(
+                id,
+                lyj_ItemName,
+                lyj_ItemPriceText,
+                lyj_ItemCnt,
+                selectedHotIceOption,
+                lyj_plusOptShot,
+                lyj_plusOptShotPrice
+            )
             val mainActivity = activity as MainActivity
             // 아이템 추가
             mainActivity.addNewItem(lyj_itemData)
             dismiss()
         }
-
         return view
     }
 
 
     private fun updateOptCartBtnState() {
-
-        // dessert인 경우 버튼 활성화
+        // dessert인 경우 주문담기 버튼 활성화
         if (id.contains("dessert")) {
             lyj_optionCart.isEnabled = true
             lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
             lyj_optionCart.setTextColor(Color.parseColor("#FFFFFF"))
             return
         }
-
-
         // 라디오 버튼 선택 여부로 버튼 활성화
-        val isAnyHotIceSelected = listOf(lyj_optHot, lyj_optIce)
-            .any { it.isChecked }
-        val isAnyRadBtnSelected = listOf(lyj_basic, lyj_light, lyj_addShot, lyj_addTwoShot)
-            .any { it.isChecked }
+        val isAnyHotIceSelected = listOf(lyj_optHot, lyj_optIce).any { it.isChecked }
+        val isAnyRadBtnSelected =
+            listOf(lyj_basic, lyj_light, lyj_addShot, lyj_addTwoShot).any { it.isChecked }
 
+        // 모두 만족하는지 확인
         val lyj_isBothSelected = (isAnyRadBtnSelected && isAnyHotIceSelected)
 
         lyj_optionCart.isEnabled = lyj_isBothSelected
 
         if (lyj_isBothSelected) {
-            // 라디오 버튼 선택된 경우 주문담기 버튼 활성화
+            // 라디오 버튼 둘다 선택된 경우 주문담기 버튼 활성화
             lyj_optionCart.setBackgroundColor(Color.parseColor("#006400"))
             lyj_optionCart.setTextColor(Color.parseColor("#FFFFFF"))
 
-        }  else {
+        } else {
             // 그게 아니라면 비활성화
             lyj_optionCart.setBackgroundResource(R.drawable.stroke_btn)
             lyj_optionCart.setTextColor(Color.parseColor("#006400"))
         }
     }
-
-
 }
