@@ -36,7 +36,7 @@
             android:layout_marginBottom="10dp"
             android:text="카드 단말기에 신용/체크카드를 넣어주세요."
             android:textAlignment="center"
-            android:textColor="#7C7C7C"
+            android:textColor="@color/text_gray"
             android:textSize="12dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -67,19 +67,20 @@
                 android:id="@+id/lyj_totalPriceDialog"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="353300"
-                android:textColor="#FF0000"
-                android:textSize="16dp"
-                android:gravity="right"
                 android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0"
+                android:textColor="@color/text_color"
+                android:textSize="16dp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:text=" 원"
-                android:textColor="#FF0000"
+                android:textColor="@color/text_color"
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -89,8 +90,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/option_border_white"
         android:orientation="vertical"
@@ -115,7 +116,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="일시불"
-                android:textColor="#7C7C7C"
+                android:textColor="@color/text_gray"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
@@ -148,9 +149,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:textSize="16dp"
                 android:text="****-****-****-****"
-                android:textColor="#7C7C7C"
+                android:textColor="@color/text_gray"
+                android:textSize="16dp"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
@@ -170,7 +171,7 @@
             android:layout_weight="1"
             android:background="@drawable/stroke_btn"
             android:text="취소"
-            android:textColor="#006400"
+            android:textColor="@color/main_green"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -179,7 +180,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#006400"
+            android:background="@color/main_green"
             android:text="승인 요청"
             android:textColor="@color/white"
             android:textSize="16dp"

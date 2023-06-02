@@ -66,7 +66,7 @@ class takeDialog(private val itemList: ArrayList<ItemData>, private val totalPri
                 Toast.makeText(context, "장소를 선택해 주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 lyj_takeNext.isEnabled = false
-                val dialog = payCardDialog(itemList,totalPrice.toString())
+                val dialog = payCardDialog(totalPrice)
                 dialog.show(parentFragmentManager, "CustomDialog")
                 dismiss()
             }

@@ -11,11 +11,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-class payCardDialog(private val itemList: ArrayList<ItemData>, private val getTotalPrice: String) : DialogFragment() {
-//    private var _binding: DialogLayoutBinding? = null
-//    private val binding get() = _binding!!
+class payCardDialog(private val getTotalPrice: String) : DialogFragment() {
 
-    private var totalPrice: Int = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,13 +33,7 @@ class payCardDialog(private val itemList: ArrayList<ItemData>, private val getTo
 
         lyj_totalPriceDialog.text = getTotalPrice
 
-
         lyj_cancelBtn.setOnClickListener {
-            // 리스트가 비어있지 않다면 lyj_payBtn, lyj_payImgBtn 다시 클릭 가능
-            if (itemList.isNotEmpty()) {
-                (activity as? MainActivity)?.lyj_payBtn?.isEnabled = true
-                (activity as? MainActivity)?.lyj_payImgBtn?.isEnabled = true
-            }
             dismiss()
         }
 
@@ -53,34 +44,16 @@ class payCardDialog(private val itemList: ArrayList<ItemData>, private val getTo
             mainActivity.let {
                 Toast.makeText(context, "결제중입니다. 잠시만 기다려주세요.", Toast.LENGTH_SHORT).show()
 
+                // 5초 후에 결제 완료 메시지 표시 후 화면 전환
                 Handler(Looper.getMainLooper()).postDelayed({
                     Toast.makeText(context, "결제가 완료되었습니다.", Toast.LENGTH_SHORT).show()
                     it.clearItemListAll()
                     val dialog = thxDialog()
                     dialog.show(parentFragmentManager, "CustomDialog")
                     dismiss()
-
-
                 }, 5000)
             }
-
-
-/*
-            Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(activity, LoadingActivity::class.java)
-                startActivity(intent)
-            }, 5000)*/
-
-
-
         }
-
         return view
     }
-    /*override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }*/
-
-
 }

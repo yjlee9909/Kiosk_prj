@@ -10,5 +10,7 @@
     <color name="main_green">#006400</color>
     <color name="menu_background">#DAD9D9</color>
     <color name="text_color">#F80000</color>
+    <color name="text_gray">#7C7C7C</color>
+
 
 </resources>
