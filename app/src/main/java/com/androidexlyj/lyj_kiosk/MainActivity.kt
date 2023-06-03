@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (!isPaused) {
+        if (!isCountDownRunning) {
             startCountDown()
         }
     }
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
     // 일시정지
     override fun onPause() {
         super.onPause()
-        isPaused = true
+        isCountDownRunning = true
         stopCountDown()
     }
 
